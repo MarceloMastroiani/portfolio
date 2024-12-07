@@ -3,19 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-primary: "url('/blod-fondo.svg')";
+  --color-primary: #0f0606;
+  --color-secondary: #2f0000;
+  --color-tertiary: #780000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Main container */
+.main-container {
+  @apply flex flex-row w-full min-h-[100%] bg-[url('/blod-fondo.svg')] bg-cover bg-center bg-no-repeat;
+}
+
+/* About me */
+.article-container {
+  @apply flex flex-col items-center justify-center w-full h-full text-white;
+}
+.section-about-me {
+  @apply flex flex-col items-center justify-center w-[70%] h-full mt-20;
+
+  background: rgba(144, 144, 144, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.div-about-me {
+  @apply flex flex-col items-center w-[90%] justify-center py-5;
+}
+.div-about-me h1 {
+  @apply text-3xl text-white pb-3;
+}
+.div-about-me p {
+  @apply text-xl text-white;
 }

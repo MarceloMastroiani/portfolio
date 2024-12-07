@@ -1,0 +1,8 @@
+@import "../../app/globals.css";
+
+.nav-component {
+  @apply flex justify-end gap-4 pr-6 w-full h-auto  text-white sticky top-0 pt-2;
+}
+.nav-component a {
+  @apply text-sm text-white hover:text-[var(--color-primary)] p-2;
+}
