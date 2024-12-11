@@ -1,0 +1,5 @@
+@import "../../app/globals.css";
+
+.button-open-close {
+  @apply fixed top-4 right-4 z-50 p-2 text-white rounded-md;
+}

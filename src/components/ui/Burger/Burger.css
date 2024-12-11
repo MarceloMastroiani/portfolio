@@ -1,0 +1,29 @@
+@import "../../../app/globals.css";
+
+.burger {
+  display: block;
+  cursor: pointer;
+}
+
+.linea {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin: 5px auto;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  opacity: 0.8;
+}
+
+.burger.open .linea:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger.open .linea:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .linea:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}

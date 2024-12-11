@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       animation: {
         fadeIn: "fadeIn 2s ease-out",
+        imgDivTransition: "imgDivTransition 1s ease-in-out forwards",
+        imgTransition: "imgTransition 1s ease-in-out",
       },
       keyframes: {
         fadeIn: {
@@ -21,6 +23,23 @@ const config: Config = {
           "100%": {
             opacity: "1",
             transform: "scale(1)",
+          },
+        },
+        imgDivTransition: {
+          "0%": {
+            transform: "translatey(0)",
+          },
+
+          "100%": {
+            transform: "translatey(-105%)",
+          },
+        },
+        imgTransition: {
+          "0%": {
+            transform: "translatey(200%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
           },
         },
       },

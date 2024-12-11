@@ -1,0 +1,5 @@
+@import "../../app/globals.css";
+
+.footer-container {
+  @apply sticky bottom-0 flex flex-col items-center justify-center h-[88vh] bg-[--background-secondary] py-[4em] px-[8em] z-10;
+}
