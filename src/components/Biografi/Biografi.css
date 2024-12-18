@@ -1,0 +1,9 @@
+@import "../../app/globals.css";
+
+.bio-section {
+  @apply flex flex-col items-center justify-center h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] gap-y-8 z-20;
+}
+
+.bio-button {
+  @apply animate-pulse;
+}

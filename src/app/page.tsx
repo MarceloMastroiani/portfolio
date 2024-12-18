@@ -35,28 +35,25 @@ export default function Home() {
           />
         </div>
         {/* Text about me */}
-        <div className="w-[60vw]">
-          <div className=" mb-8">
+        <div className="w-[60vw] flex flex-col justify-center gap-y-10 text-balance text-center">
+          <div>
             <h1 className={`${montserrat.className} text-4xl text-white`}>
-              <span className="text-[--color-primary]">Marcelo Mastroiani</span>
-              , programador front-end y back-end
+              ¡Hola! Soy{" "}
+              <span className="text-[--color-primary]">Marcelo Mastroiani</span>{" "}
+              un programador full-stack.
             </h1>
           </div>
+
           <p className={`${nunito.className} text-2xl text-white leading-9`}>
-            Apasionado por la tecnología y el aprendizaje constante. Me esfuerzo
-            por mejorar cada día, no solo en habilidades técnicas, sino también
-            en el trabajo en equipo y la colaboración. Disfruto creando
-            aplicaciones que combinan diseño atractivo con funcionalidad
-            eficiente, aportando soluciones innovadoras tanto en el frontend
-            como en el backend. Mi dedicación a la programación y mi entusiasmo
-            por superar desafíos me impulsan a dar siempre lo mejor.
+            Trabajo tanto en front-end como en back-end para crear aplicaciones
+            que combinan diseño atractivo y funcionalidad eficiente.
           </p>
-          <div className="mt-8 ">
+          <div className="animate-pulse">
             <Link
-              href="/#"
-              className={`${nunito.className} text-2xl text-[--color-primary] leading-9 hover:underline`}
+              href="/about"
+              className={`${montserrat.className} text-2xl text-[--color-primary] leading-9 hover:underline`}
             >
-              Ir a works
+              Descubre más sobre mí
               <IoIosArrowRoundForward className="inline text-5xl" />
             </Link>
           </div>

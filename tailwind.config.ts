@@ -13,6 +13,7 @@ const config: Config = {
         fadeIn: "fadeIn 2s ease-out",
         imgDivTransition: "imgDivTransition 1s ease-in-out forwards",
         imgTransition: "imgTransition 1s ease-in-out",
+        bioDiv: "bioDiv 2s ease-in-out",
       },
       keyframes: {
         fadeIn: {
@@ -40,6 +41,16 @@ const config: Config = {
           },
           "100%": {
             transform: "translateY(0)",
+          },
+        },
+        bioDiv: {
+          "0%": {
+            transform: "scale(0.90)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
           },
         },
       },
