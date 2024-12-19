@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoNewspaperOutline } from "react-icons/io5";
-// import { Montserrat } from "../fonts";
 
 export default function FooterContact() {
   return (
@@ -26,7 +25,7 @@ export default function FooterContact() {
         </Link>
         <a
           //problema con el link
-          href="https://docs.google.com/document/d/e/2PACX-1vSV6IlfPnPIxtFcvYZbGEZRueGvLoXXVwKp9cAA3BrHzR9_7Gr75V751d5N-1ZEnw/pub"
+          href="_CV-MarceloMastroiani-ES.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white text-4xl opacity-70 hover:opacity-100 hover:scale-125 ease-in-out duration-300"
