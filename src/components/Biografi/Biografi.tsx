@@ -8,34 +8,31 @@ export default function Biografi() {
   return (
     <section className=" bio-section">
       <div
-        className={`${nunito.className} flex flex-col justify-center gap-y-4 text-center text-balance w-[50vw] animate-bioDiv`}
+        className={`${nunito.className} flex flex-col justify-center gap-y-4 text-center text-balance w-[50vw] opacity-90 animate-bioDiv`}
       >
         <p className="text-white text-2xl ">
-          Soy un <span className="text-[--color-primary]">programador</span>{" "}
-          apasionado por la tecnología y el aprendizaje constante. Me esfuerzo
-          por crecer cada día, no solo desarrollando habilidades técnicas, sino
-          también fortaleciendo mi capacidad para trabajar en equipo y colaborar
-          efectivamente.
+          Soy un programador{" "}
+          <span className="text-[--color-primary]">comprometido</span> con el
+          aprendizaje y la mejora{" "}
+          <span className="text-[--color-primary]">constante</span> en cada
+          proyecto que desarrollo. Disfruto creando aplicaciones que combinan un
+          diseño atractivo con una experiencia{" "}
+          <span className="text-[--color-primary]">funcional</span> y{" "}
+          <span className="text-[--color-primary]">eficiente</span> para los
+          usuarios.
         </p>
 
         <p className="text-white text-2xl ">
-          Disfruto creando aplicaciones que no solo destacan por su diseño
-          atractivo, sino también por ofrecer una experiencia funcional y
-          eficiente a los usuarios. Me aseguro de que cada proyecto cumpla con{" "}
+          Me esfuerzo por mantener{" "}
           <span className="text-[--color-primary]">
             altos estándares de calidad
-          </span>
-          , optimizando tiempos de carga y mejorando la experiencia del usuario
-          final.
-        </p>
-
-        <p className="text-white text-2xl">
-          Cada proyecto que desarrollo está enfocado en{" "}
-          <span className="text-[--color-primary]">ofrecer soluciones</span>{" "}
-          prácticas y eficientes que realmente marquen una diferencia en la vida
-          de los usuarios o el éxito de un negocio. Mi compromiso es entregar
-          soluciones que no solo funcionen, sino que también superen las
-          expectativas y aporten valor real.
+          </span>{" "}
+          en cada etapa del desarrollo, optimizando el rendimiento y
+          asegurándome de que el producto final cumpla con las expectativas. Mi
+          objetivo es ofrecer{" "}
+          <span className="text-[--color-primary]">soluciones prácticas</span>{" "}
+          que aporten valor real y hagan una diferencia tanto para los usuarios
+          como para los negocios.
         </p>
       </div>
 
