@@ -1,7 +1,17 @@
 @import "../../app/globals.css";
 
 .bio-section {
-  @apply flex flex-col items-center justify-center h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] gap-y-8 z-30;
+  @apply flex flex-col items-center justify-center h-screen py-[4em] px-[8em] overflow-hidden bg-[url("/fondo-pantalla.jpg")] bg-cover bg-center gap-y-8 z-30;
+}
+
+.bio-div {
+  background: rgba(56, 56, 56, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(56, 56, 56, 0.16);
+  @apply flex flex-col items-center justify-center gap-y-8 text-center py-5 px-3;
 }
 
 .bio-button {

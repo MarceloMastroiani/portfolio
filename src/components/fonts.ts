@@ -11,5 +11,5 @@ export const montserrat = Montserrat({
 //Anchos sugeridos: 400 (regular) o 300 (light)
 export const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["500"],
+  weight: ["500", "700"],
 });
