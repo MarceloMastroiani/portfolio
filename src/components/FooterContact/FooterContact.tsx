@@ -9,42 +9,53 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function FooterContact() {
   return (
     <footer className="relative footer-container">
-      <h1 className="text-4xl text-white">Contact</h1>
-
-      {/* iconos de locacion  */}
-      <div className={`${montserrat.className} absolute bottom-5 left-10 `}>
-        <IoLocationSharp className="text-white text-2xl opacity-80" />
-        <p className="text-white text-xl opacity-70 font-extrabold ">
-          Location
+      {/* cambiar el boton por link  */}
+      <Link
+        href={"mailto:mastroianimarcelo04@gmail.com"}
+        target="_blank"
+        rel="noreferrer"
+        className="w-full h-full bg-[--background-tertiary] flex flex-col items-center justify-center"
+      >
+        <p
+          className={`${montserrat.className} text-4xl text-white animate-pulse opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300`}
+        >
+          Click para contactar 👆
         </p>
-        <p className="text-white text-xl opacity-50 font-semibold">
-          {" "}
+      </Link>
+
+      {/* iconos de Ubicacion  */}
+      <div className={`${montserrat.className} absolute bottom-5 left-10 `}>
+        <IoLocationSharp className="text-[--color-primary] text-2xl opacity-80" />
+        <p className="text-white text-xl opacity-70 font-extrabold ml-1">
+          Ubicación
+        </p>
+        <p className="text-[--color-primary] text-xl opacity-80 font-bold ml-1">
           Buenos Aires, Argentina
         </p>
       </div>
       {/* Iconos redes sociales */}
       <div className="absolute bottom-5 right-10 flex gap-4">
         <Link
-          href="/#"
-          className="text-white text-4xl opacity-70 hover:opacity-100 hover:scale-125 ease-in-out duration-300"
+          href="https://github.com/MarceloMastroiani"
+          className="text-white text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300"
         >
           <FaGithub className="inline " />
         </Link>
         <Link
-          href="/#"
-          className="text-blue-500 text-4xl opacity-70 hover:opacity-100 hover:scale-125 ease-in-out duration-300"
+          href="https://www.linkedin.com/in/marcelo-mastroiani/"
+          className="text-blue-500 text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300"
         >
           <FaLinkedin className="inline" />
         </Link>
-        <a
+        <Link
           //problema con el link
           href="_CV-MarceloMastroiani-ES.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-4xl opacity-70 hover:opacity-100 hover:scale-125 ease-in-out duration-300"
+          className="text-white text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300"
         >
           <IoNewspaperOutline className="inline" />
-        </a>
+        </Link>
       </div>
     </footer>
   );

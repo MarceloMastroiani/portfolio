@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full min-h-[100%]">
-      <section className="flex items-center justify-between h-screen py-[4em] px-[8em] overflow-hidden  bg-[--background-primary] z-20">
+      <section className="flex items-center justify-between h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] z-20">
         {/* Imagen */}
         <div
           id="img"
@@ -27,7 +27,7 @@ export default function Home() {
             className={`absolute top-0 w-full h-full bg-[--color-primary] rounded-lg ${animation}`}
           ></div>
           <Image
-            src={"/foto-perfil.jpeg"}
+            src={"/foto-perfil.webp"}
             alt="Profile picture of Marcelo Mastroiani"
             className="rounded-lg object-contain "
             width={600}

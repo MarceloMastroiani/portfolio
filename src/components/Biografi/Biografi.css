@@ -1,7 +1,7 @@
 @import "../../app/globals.css";
 
 .bio-section {
-  @apply flex flex-col items-center justify-center h-screen py-[4em] px-[8em] overflow-hidden bg-[url("/fondo-pantalla.jpg")] bg-cover bg-center gap-y-8 z-30;
+  @apply flex flex-col items-center justify-center h-screen py-[4em] px-[8em] overflow-hidden bg-[url("/fondo-pantalla.webp")] bg-cover bg-center gap-y-8 z-30;
 }
 
 .bio-div {
