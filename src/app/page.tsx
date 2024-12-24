@@ -4,15 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { montserrat } from "@/components/fonts";
 import { nunito } from "../components/fonts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import FooterContact from "@/components/FooterContact/FooterContact";
 
 export default function Home() {
   const [animation, setAnimation] = useState("");
-  setTimeout(() => {
-    setAnimation("animate-imgDivTransition");
-  }, 1000);
+
+  useEffect(() => {
+    setAnimation("");
+
+    const timer = setTimeout(() => {
+      setAnimation("animate-imgDivTransition");
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <main className="flex flex-col w-full min-h-[100%]">
@@ -32,6 +39,8 @@ export default function Home() {
             className="rounded-lg object-contain "
             width={600}
             height={400}
+            priority={true}
+            quality={75}
           />
         </div>
         {/* Text about me */}

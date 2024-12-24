@@ -62,7 +62,7 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
             ? "Objetivos a Corto Plazo"
             : "Objetivos a Largo Plazo"}
         </h2>
-        <ul className="space-y-4 ">
+        <ul className="space-y-4">
           {/* Si activeTab es cortoplazo, se muestra el array cortoplazo, si no, se muestra el array largoplazo */}
           {(activeTab === "cortoplazo" ? cortoplazo : largoplazo).map(
             //Se mapean los objetivos de cortoplazo y largoplazo

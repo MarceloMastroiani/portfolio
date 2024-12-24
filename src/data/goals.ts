@@ -1,35 +1,30 @@
 export const objetivosCortoplazo = [
   {
-    titulo: "Aprender un nuevo idioma",
+    titulo: "Fortalecer mis habilidades a través de proyectos prácticos",
     descripcion:
-      "Alcanzar un nivel intermedio en inglés en los próximos 6 meses.",
+      "Desarrollar proyectos reales para aplicar mis conocimientos, ganar experiencia en la resolución de problemas técnicos.",
   },
   {
-    titulo: "Mejorar habilidades de programación",
+    titulo: "Aprender sobre microservicios",
     descripcion:
-      "Completar un curso de React avanzado y construir un proyecto personal.",
+      " Estudiar y aplicar arquitecturas de microservicios para desarrollar sistemas escalables y eficientes.",
   },
   {
-    titulo: "Establecer una rutina de ejercicio",
+    titulo: "Ser más activo en redes profesionales",
     descripcion:
-      "Hacer ejercicio al menos 3 veces por semana durante los próximos 3 meses.",
+      "Participar en LinkedIn y otras redes, compartiendo contenido e interactuando para ampliar mi red profesional.",
   },
 ];
 
 export const objetivosLargoplazo = [
   {
-    titulo: "Cambiar de carrera",
+    titulo: "Trabajar en una empresa líder en tecnología",
     descripcion:
-      "Transicionar a una carrera en desarrollo web en los próximos 2 años.",
+      "Trabajar en una empresa líder para mejorar mis habilidades y asumir desafíos más complejos en el desarrollo tecnológico",
   },
   {
-    titulo: "Viajar por el mundo",
+    titulo: "Convertirme en un referente en mi campo",
     descripcion:
-      "Visitar al menos 10 países diferentes en los próximos 5 años.",
-  },
-  {
-    titulo: "Escribir un libro",
-    descripcion:
-      "Publicar mi primer libro sobre desarrollo personal en los próximos 3 años.",
+      "Compartir mis conocimientos a través de proyectos y colaboraciones para contribuir al avance tecnológico.",
   },
 ];
