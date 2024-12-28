@@ -7,6 +7,7 @@ import { nunito } from "../components/fonts";
 import { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import FooterContact from "@/components/FooterContact/FooterContact";
+import "./globals.css";
 
 export default function Home() {
   const [animation, setAnimation] = useState("");
@@ -23,12 +24,9 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full min-h-[100%]">
-      <section className="flex items-center justify-between h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] z-20">
+      <section className="section-home-homepage">
         {/* Imagen */}
-        <div
-          id="img"
-          className={` relative w-[40vw] mr-[4em] overflow-hidden animate-imgTransition`}
-        >
+        <div id="img" className={`div-container-img-homepage`}>
           <div
             id="imgDiv"
             className={`absolute top-0 w-full h-full bg-[--color-primary] rounded-lg ${animation}`}
@@ -36,7 +34,7 @@ export default function Home() {
           <Image
             src={"/foto-perfil.webp"}
             alt="Profile picture of Marcelo Mastroiani"
-            className="rounded-lg object-contain "
+            className="rounded-lg"
             width={600}
             height={400}
             priority={true}
@@ -44,7 +42,7 @@ export default function Home() {
           />
         </div>
         {/* Text about me */}
-        <div className="w-[60vw] flex flex-col justify-center gap-y-10 text-balance text-center">
+        <div className="div-about-homepage">
           <div>
             <h1 className={`${montserrat.className} text-4xl text-white`}>
               ¡Hola! Soy{" "}
@@ -57,7 +55,7 @@ export default function Home() {
             Trabajo tanto en front-end como en back-end para crear aplicaciones
             que combinan diseño atractivo y funcionalidad eficiente.
           </p>
-          <div className="animate-pulse">
+          <div className="div-link-homepage">
             <Link
               href="/about"
               className={`${montserrat.className} text-2xl text-[--color-primary] leading-9 hover:underline`}

@@ -1,5 +1,40 @@
 @import "../../app/globals.css";
 
-.footer-container {
+.footer-container-footerContact {
   @apply sticky bottom-0 flex flex-col items-center justify-center h-[88vh] bg-[--background-secondary] py-[6em] px-[10em] z-10;
+}
+
+.div-location-footerContact {
+  @apply absolute bottom-5 left-10;
+}
+
+.div-redes-footerContact {
+  @apply absolute bottom-5 right-10 flex gap-4;
+}
+
+/* Media Queries RESPONSIVE */
+@media (max-width: 768px), (hover: none) {
+  /* Footer */
+  .footer-container-footerContact {
+    @apply sticky bottom-0 py-[6em] px-4;
+  }
+  .footer-container-footerContact p {
+    @apply text-lg hover:opacity-70 hover:text-white hover:scale-100;
+  }
+
+  /* Iconos de ubicación */
+  .div-location-footerContact {
+    @apply bottom-5 left-2 ml-2;
+  }
+  .div-location-footerContact p {
+    @apply text-sm;
+  }
+
+  /* Iconos de redes sociales */
+  .div-redes-footerContact {
+    @apply gap-3;
+  }
+  .div-redes-footerContact a {
+    @apply text-2xl;
+  }
 }

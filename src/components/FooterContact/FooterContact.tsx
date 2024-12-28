@@ -8,8 +8,8 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function FooterContact() {
   return (
-    <footer className="relative footer-container">
-      {/* cambiar el boton por link  */}
+    <footer className="relative footer-container-footerContact">
+      {/* LINK para contactar */}
       <Link
         href={"mailto:mastroianimarcelo04@gmail.com"}
         target="_blank"
@@ -24,7 +24,7 @@ export default function FooterContact() {
       </Link>
 
       {/* iconos de Ubicacion  */}
-      <div className={`${montserrat.className} absolute bottom-5 left-10 `}>
+      <div className={`${montserrat.className} div-location-footerContact `}>
         <IoLocationSharp className="text-[--color-primary] text-2xl opacity-80" />
         <p className="text-white text-xl opacity-70 font-extrabold ml-1">
           Ubicación
@@ -33,8 +33,9 @@ export default function FooterContact() {
           Buenos Aires, Argentina
         </p>
       </div>
+
       {/* Iconos redes sociales */}
-      <div className="absolute bottom-5 right-10 flex gap-4">
+      <div className="div-redes-footerContact">
         <Link
           href="https://github.com/MarceloMastroiani"
           className="text-white text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300"
@@ -49,7 +50,7 @@ export default function FooterContact() {
         </Link>
         <Link
           //problema con el link
-          href="_CV-MarceloMastroiani-ES.pdf"
+          href="/_CV-MarceloMastroiani-ES.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300"

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { montserrat } from "../fonts";
 import { nunito } from "../fonts";
+import "./goals.components.css";
 
 interface Objetivo {
   titulo: string;
@@ -20,9 +21,7 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
   );
 
   return (
-    <section
-      className={`${montserrat.className} flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] gap-y-8 z-30`}
-    >
+    <section className={`${montserrat.className} goal-section`}>
       <h1 className="text-4xl font-extrabold mb-8 text-white text-center">
         Mis objetivos 🎯
       </h1>
@@ -56,7 +55,7 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
       </div>
 
       {/* CONTENIDOS DE LOS OBJETIVOS */}
-      <div className="p-6">
+      <div className="overflow-auto md:p-6 h-[50vh]">
         <h2 className="text-2xl text-white font-extrabold mb-4">
           {activeTab === "cortoplazo"
             ? "Objetivos a Corto Plazo"

@@ -1,0 +1,11 @@
+@import "../../app/globals.css";
+
+.goal-section {
+  @apply flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] gap-y-8 z-30;
+}
+
+@media (max-width: 768px) {
+  .goal-section {
+    @apply flex flex-col items-center justify-center h-screen py-[2em] px-[2em] overflow-hidden bg-[--background-primary] gap-y-8 z-30;
+  }
+}

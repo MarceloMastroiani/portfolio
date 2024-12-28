@@ -6,11 +6,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Biografi() {
   return (
-    <section className="bio-section">
-      <div className=" bio-div">
-        <div
-          className={`${nunito.className} flex flex-col justify-center gap-y-4 text-center text-balance w-[50vw] opacity-90 animate-bioDiv`}
-        >
+    <section className="section-container-biografi">
+      <div className="div-container-biografi">
+        <div className={`${nunito.className} div-parrafos-biografi`}>
           <p className="text-white text-2xl opacity-90">
             Soy un programador{" "}
             <span className="text-[--color-primary] font-bold">
@@ -42,7 +40,7 @@ export default function Biografi() {
           </p>
         </div>
 
-        <div className="bio-button">
+        <div className="button-biografi">
           <Link
             href="/projects"
             className={`${montserrat.className} text-2xl text-[--color-primary] leading-9 hover:underline`}

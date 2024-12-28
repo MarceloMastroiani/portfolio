@@ -39,7 +39,7 @@ export default function Sidebar() {
           <div className="p-4 border-b border-gray-700 pt-14"></div>
 
           {/* Enlaces de navegación */}
-          <nav className="flex-grow">
+          <nav className="nav-links">
             <ul className="p-4">
               {menuItems.map((item) => (
                 <li key={item.href} className="mb-4">

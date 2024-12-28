@@ -27,3 +27,12 @@
 .burger.open .linea:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
+
+/* Media Queries RESPONSIVE */
+@media (max-width: 768px) {
+  .linea {
+    width: 30px;
+    height: 3px;
+    margin: 7px auto;
+  }
+}
