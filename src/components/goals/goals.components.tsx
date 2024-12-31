@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { montserrat } from "../fonts";
 import { nunito } from "../fonts";
-import "./goals.components.css";
+import "./Goals.components.css";
 
 interface Objetivo {
   titulo: string;

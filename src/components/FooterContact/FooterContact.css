@@ -1,6 +1,7 @@
 @import "../../app/globals.css";
 
 .footer-container-footerContact {
+  /* actualizamos el bg para que sea un color solido y no una imagen, pq la imagen se hace que el footer se superponga haciendo scroll (esto pasa en mobile)*/
   @apply sticky bottom-0 flex flex-col items-center justify-center h-[88vh] bg-[--background-secondary] py-[6em] px-[10em] z-10;
 }
 

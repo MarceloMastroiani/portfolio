@@ -18,7 +18,7 @@ body {
   background: var(--background-primary);
 }
 
-.section-home-homepage {
+.section-container-homepage {
   @apply flex items-center justify-between h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] z-20;
 }
 .div-container-img-homepage {
@@ -34,11 +34,11 @@ body {
 /* Media Queries RESPONSIVE */
 @media (max-width: 768px), (hover: none) {
   /* Sección de la página de inicio */
-  .section-home-homepage {
+  .section-container-homepage {
     @apply flex flex-col h-[100vh] py-[2em] px-[2em] overflow-hidden bg-[--background-primary] gap-y-8 z-20;
   }
 
-  /* Imagen de la sección de acerca de mi */
+  /* contenedor de la imagen */
   .div-container-img-homepage {
     @apply relative flex items-center justify-center w-[50vw] min-h-48 mr-0 overflow-hidden animate-imgTransition;
   }

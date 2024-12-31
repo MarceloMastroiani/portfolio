@@ -1,12 +1,12 @@
-import Biografi from "@/components/Biografi/Biografi";
-import Goals from "@/components/goals/goals.components";
+import Biography from "@/components/Biography/Biography";
+import Goals from "@/components/Goals/Goals.components";
 import FooterContact from "@/components/FooterContact/FooterContact";
 import { objetivosCortoplazo, objetivosLargoplazo } from "@/data/goals";
 export default function AboutMe() {
   return (
-    <main className="relative flex flex-col w-full min-h-[100%]">
+    <main className="relative flex flex-col w-full min-h-screen">
       {/* section con texto */}
-      <Biografi />
+      <Biography />
       {/* section con objetivos */}
 
       <Goals

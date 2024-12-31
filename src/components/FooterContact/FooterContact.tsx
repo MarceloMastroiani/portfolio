@@ -8,7 +8,7 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function FooterContact() {
   return (
-    <footer className="relative footer-container-footerContact">
+    <footer className="footer-container-footerContact">
       {/* LINK para contactar */}
       <Link
         href={"mailto:mastroianimarcelo04@gmail.com"}

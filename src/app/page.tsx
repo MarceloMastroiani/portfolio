@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full min-h-[100%]">
-      <section className="section-home-homepage">
+      <section className="section-container-homepage">
         {/* Imagen */}
         <div id="img" className={`div-container-img-homepage`}>
           <div

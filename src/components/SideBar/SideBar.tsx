@@ -6,9 +6,9 @@ import Link from "next/link";
 import Burger from "../ui/Burger/Burger";
 
 const menuItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
+  { href: "/", label: "Inicio" },
+  { href: "/about", label: "Acerca de" },
+  { href: "/projects", label: "Proyectos" },
 ];
 
 export default function Sidebar() {

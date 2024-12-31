@@ -1,13 +1,13 @@
 @import "../../app/globals.css";
 
-.section-container-biografi {
-  @apply flex flex-col items-center justify-center h-screen py-[4em] px-[8em] overflow-hidden bg-[url("/fondo-pantalla.webp")] bg-cover bg-center gap-y-8 z-30;
+.section-container-biography {
+  @apply flex flex-col items-center justify-center h-screen overflow-hidden bg-[--background-secondary] py-[4em] px-[8em] gap-y-8 z-30;
 }
-.div-parrafos-biografi {
+.div-parrafos-biography {
   @apply flex flex-col justify-center gap-y-4 text-center text-balance w-[50vw] opacity-90 animate-bioDiv;
 }
 
-.div-container-biografi {
+.div-container-biography {
   background: rgba(56, 56, 56, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -17,34 +17,34 @@
   @apply flex flex-col items-center justify-center gap-y-8 text-center py-5 px-3;
 }
 
-.button-biografi {
+.button-biography {
   @apply animate-pulse;
 }
 
 /* Media Queries RESPONSIVE */
 @media (max-width: 768px) {
   /* Sección de la página de inicio */
-  .section-container-biografi {
+  .section-container-biography {
     @apply py-[2em] px-[2em];
   }
 
   /* Contenedor con los divs textos y link */
-  .div-container-biografi {
+  .div-container-biography {
     @apply w-full py-5 px-3 mt-5;
     background: rgba(56, 56, 56, 0.2);
     backdrop-filter: blur(4px);
   }
 
   /* contenedor de los textos */
-  .div-parrafos-biografi {
+  .div-parrafos-biography {
     @apply w-full;
   }
-  .div-parrafos-biografi p {
+  .div-parrafos-biography p {
     @apply text-lg;
   }
 
   /* Link para pestaña de about */
-  .button-biografi a {
+  .button-biography a {
     @apply text-lg px-4 py-2;
   }
 }

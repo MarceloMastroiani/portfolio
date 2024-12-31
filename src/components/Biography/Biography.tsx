@@ -1,14 +1,14 @@
-import "./Biografi.css";
+import "./Biography.css";
 import Link from "next/link";
 import { nunito } from "../fonts";
 import { montserrat } from "../fonts";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-export default function Biografi() {
+export default function Biography() {
   return (
-    <section className="section-container-biografi">
-      <div className="div-container-biografi">
-        <div className={`${nunito.className} div-parrafos-biografi`}>
+    <section className="section-container-biography ">
+      <div className="div-container-biography ">
+        <div className={`${nunito.className} div-parrafos-biography `}>
           <p className="text-white text-2xl opacity-90">
             Soy un programador{" "}
             <span className="text-[--color-primary] font-bold">
@@ -40,7 +40,7 @@ export default function Biografi() {
           </p>
         </div>
 
-        <div className="button-biografi">
+        <div className="button-biography ">
           <Link
             href="/projects"
             className={`${montserrat.className} text-2xl text-[--color-primary] leading-9 hover:underline`}
