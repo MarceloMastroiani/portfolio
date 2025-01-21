@@ -29,12 +29,11 @@ export default function Home() {
         <div id="img" className={`div-container-img-homepage`}>
           <div
             id="imgDiv"
-            className={`absolute top-0 w-full h-full bg-[--color-primary] rounded-lg ${animation}`}
+            className={`absolute top-0 w-full h-full bg-[--color-primary] ${animation}`}
           ></div>
           <Image
             src={"/foto-perfil.webp"}
             alt="Profile picture of Marcelo Mastroiani"
-            className="rounded-lg"
             width={600}
             height={400}
             priority={true}

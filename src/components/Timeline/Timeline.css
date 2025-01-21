@@ -1,0 +1,14 @@
+@import "../../app/globals.css";
+
+.timeLine-section {
+  @apply flex flex-col items-center h-full overflow-hidden bg-[--background-primary] py-[4em] px-[8em] z-30;
+}
+
+@media (max-width: 768px) {
+  .timeLine-section {
+    @apply py-[2em] px-[2em];
+  }
+  .timeLine-section h2 {
+    @apply text-2xl;
+  }
+}

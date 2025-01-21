@@ -13,11 +13,17 @@
   @apply absolute bottom-5 right-10 flex gap-4;
 }
 
+@media (max-width: 920px) {
+  .footer-container-footerContact p {
+    @apply text-xl hover:opacity-70 hover:text-white hover:scale-100;
+  }
+}
+
 /* Media Queries RESPONSIVE */
 @media (max-width: 768px), (hover: none) {
   /* Footer */
   .footer-container-footerContact {
-    @apply sticky bottom-0 py-[6em] px-4;
+    @apply relative bottom-0 py-[6em] px-4;
   }
   .footer-container-footerContact p {
     @apply text-lg hover:opacity-70 hover:text-white hover:scale-100;

@@ -1,11 +1,21 @@
 @import "../../app/globals.css";
 
 .goal-section {
-  @apply flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] gap-y-8 z-30;
+  @apply flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-secondary]  z-30;
 }
 
 @media (max-width: 768px) {
   .goal-section {
-    @apply flex flex-col items-center justify-center h-screen py-[2em] px-[2em] overflow-hidden bg-[--background-primary] gap-y-8 z-30;
+    @apply flex flex-col items-center justify-center h-screen py-[2em] px-[2em];
+  }
+  .goal-section h1 {
+    @apply text-2xl;
+  }
+
+  .goal-div-content {
+    @apply overflow-auto md:p-6 h-[50vh];
+  }
+  .goal-div-content h2 {
+    @apply text-xl;
   }
 }

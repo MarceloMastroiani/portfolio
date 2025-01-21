@@ -8,6 +8,7 @@
   --background-tertiary: #1e1e1e;
   --background-sidebar: #191919;
   --color-primary: #c1121f;
+  --colort-secondary: #710808;
 }
 
 html,
@@ -24,6 +25,7 @@ body {
 .div-container-img-homepage {
   @apply relative w-[40vw] mr-[4em] overflow-hidden animate-imgTransition;
 }
+
 .div-about-homepage {
   @apply w-[60vw] flex flex-col justify-center gap-y-10 text-balance text-center;
 }
@@ -41,9 +43,6 @@ body {
   /* contenedor de la imagen */
   .div-container-img-homepage {
     @apply relative flex items-center justify-center w-[50vw] min-h-48 mr-0 overflow-hidden animate-imgTransition;
-  }
-  .div-container-img-homepage img {
-    @apply rounded-lg;
   }
 
   /* Texto de la sección de acerca de mi */

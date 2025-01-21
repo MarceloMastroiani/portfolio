@@ -22,12 +22,12 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
 
   return (
     <section className={`${montserrat.className} goal-section`}>
-      <h1 className="text-4xl font-extrabold mb-8 text-white text-center">
+      <h1 className="text-4xl font-extrabold mb-20 text-white text-center">
         Mis objetivos 🎯
       </h1>
 
       {/* BOTONES */}
-      <div className="flex w-full justify-center">
+      <div className="flex w-full mb-8 justify-center">
         {/* BOTON DE CORTO PLAZO */}
         <button
           className={`flex-1 py-2 px-4 text-center ${
@@ -55,7 +55,7 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
       </div>
 
       {/* CONTENIDOS DE LOS OBJETIVOS */}
-      <div className="overflow-auto md:p-6 h-[50vh]">
+      <div className="goal-div-content ">
         <h2 className="text-2xl text-white font-extrabold mb-4">
           {activeTab === "cortoplazo"
             ? "Objetivos a Corto Plazo"
