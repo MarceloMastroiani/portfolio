@@ -3,6 +3,17 @@ import Goals from "@/components/Goals/Goals";
 import Skills from "@/components/Skills/Skills";
 import FooterContact from "@/components/FooterContact/FooterContact";
 import { objetivosCortoplazo, objetivosLargoplazo } from "@/data/goals";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marcelo Mastroiani - Acerca de mi",
+  description:
+    "Learn more about Marcelo, a passionate developer from Argentina.",
+  icons: {
+    icon: "./favicon.png",
+  },
+};
+
 export default function AboutMe() {
   return (
     <main className="relative flex flex-col w-full min-h-screen">

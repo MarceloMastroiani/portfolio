@@ -1,3 +1,3 @@
-# portfolio-Marcelo-NextJs
+# Marcelo Mastroiani Portfolio
 
-\*Mirar la parte de contactos
+This is my personal portfolio built with **Next.js** and **TailwindCSS**.

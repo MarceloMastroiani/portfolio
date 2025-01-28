@@ -1,4 +1,13 @@
 import FooterContact from "@/components/FooterContact/FooterContact";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marcelo Mastroiani - Proyectos",
+  description: "Check out Marcelo's latest projects.",
+  icons: {
+    icon: "./favicon.png",
+  },
+};
 
 export default function Projects() {
   return (

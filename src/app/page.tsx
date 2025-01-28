@@ -24,9 +24,14 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full min-h-[100%]">
-      <section className="section-container-homepage">
+      {/* section-container */}
+      <section className="flex items-center justify-between h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] z-20 max-[768px]:flex-col max-[768px]:gap-y-8 max-[768px]:px-[2em] max-[768px]:py-[2em]">
         {/* Imagen */}
-        <div id="img" className={`div-container-img-homepage`}>
+
+        <div
+          id="img"
+          className={`relative w-[40vw] mr-[4em] overflow-hidden animate-imgTransition max-[768px]:flex max-[768px]:items-center max-[768px]:justify-center max-[768px]:w-[50vw] max-[768px]:min-h-48 max-[768px]:mr-0`}
+        >
           <div
             id="imgDiv"
             className={`absolute top-0 w-full h-full bg-[--color-primary] ${animation}`}
@@ -41,23 +46,27 @@ export default function Home() {
           />
         </div>
         {/* Text about me */}
-        <div className="div-about-homepage">
+        <div className="w-[60vw] flex flex-col justify-center gap-y-10 text-balance text-center max-[768px]:h-full max-[768px]:justify-start max-[768px]:gap-y-4 max-[768px]:z-[100] max-[768px]:bg-[--background-primary]">
           <div>
-            <h1 className={`${montserrat.className} text-4xl text-white`}>
+            <h1
+              className={`${montserrat.className} text-4xl text-white max-[768px]:text-2xl`}
+            >
               ¡Hola! Soy{" "}
               <span className="text-[--color-primary]">Marcelo Mastroiani</span>{" "}
               un programador full-stack.
             </h1>
           </div>
 
-          <p className={`${nunito.className} text-2xl text-white leading-9`}>
+          <p
+            className={`${nunito.className} text-2xl text-white leading-9 max-[768px]:text-xl`}
+          >
             Trabajo tanto en front-end como en back-end para crear aplicaciones
             que combinan diseño atractivo y funcionalidad eficiente.
           </p>
-          <div className="div-link-homepage">
+          <div className="animate-pulse">
             <Link
               href="/about"
-              className={`${montserrat.className} text-2xl text-[--color-primary] leading-9 hover:underline`}
+              className={`${montserrat.className} text-2xl text-[--color-primary] leading-9 hover:underline max-[768px]:text-sm max-[768px]:hover:no-underline`}
             >
               Descubre más sobre mí
               <IoIosArrowRoundForward className="inline text-5xl" />
