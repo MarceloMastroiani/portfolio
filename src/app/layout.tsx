@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marcelo Mastroiani - Portfolio",
     description: "Explore the work and projects of Marcelo Mastroiani.",
-    url: "https://portfolio-sepia-mu-62.vercel.app",
+    url: "https://marcelomastroiani-portfolio.vercel.app",
     images: [
       {
         url: "/fondo-pantalla.webp",
