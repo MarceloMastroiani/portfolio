@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function AboutMe() {
   return (
-    <main className="relative flex flex-col w-full min-h-screen">
+    <main className="relative flex flex-col">
       {/* section con linea de tiempo */}
       <Timeline />
 

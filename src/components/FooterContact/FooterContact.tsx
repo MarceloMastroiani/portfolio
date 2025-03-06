@@ -38,21 +38,28 @@ export default function FooterContact() {
       <div className="absolute bottom-5 right-10 flex gap-4 max-md:gap-3">
         <Link
           href="https://github.com/MarceloMastroiani"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Github"
           className="text-white text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300 max-md:text-2xl"
         >
           <FaGithub className="inline " />
         </Link>
         <Link
           href="https://www.linkedin.com/in/marcelo-mastroiani/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Linkedin"
           className="text-blue-500 text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300 max-md:text-2xl"
         >
           <FaLinkedin className="inline" />
         </Link>
         <Link
           //problema con el link
-          href="/_CV-MarceloMastroiani-ES.pdf"
+          href="/CV Marcelo Mastroiani.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="CV"
           className="text-white text-4xl opacity-70 hover:opacity-100 hover:text-[--color-primary] hover:scale-125 ease-in-out duration-300 max-md:text-2xl"
         >
           <IoNewspaperOutline className="inline" />

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { montserrat } from "../fonts";
 import { nunito } from "../fonts";
-import "./Goals.css";
 
 interface Objetivo {
   titulo: string;
@@ -21,13 +20,15 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
   );
 
   return (
-    <section className={`${montserrat.className} goal-section`}>
-      <h1 className="text-4xl font-extrabold mb-20 text-white text-center">
+    <section
+      className={`${montserrat.className} flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-secondary]  z-30 max-[768px]:justify-center max-[768px]:py-[2em] max-[768px]:px-[2em]`}
+    >
+      <h1 className="text-4xl font-extrabold mb-20 h-[10vh] text-white text-center max-[768px]:text-2xl">
         Mis objetivos 🎯
       </h1>
 
       {/* BOTONES */}
-      <div className="flex w-full mb-8 justify-center">
+      <div className="flex w-full mb-8 h-[10vh] justify-center ">
         {/* BOTON DE CORTO PLAZO */}
         <button
           className={`flex-1 py-2 px-4 text-center ${
@@ -55,8 +56,8 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
       </div>
 
       {/* CONTENIDOS DE LOS OBJETIVOS */}
-      <div className="goal-div-content ">
-        <h2 className="text-2xl text-white font-extrabold mb-4">
+      <div className="h-[80vh] max-[768px]:overflow-auto max-[768px]:h-[50vh] max-[768px]:md:p-6 ">
+        <h2 className="text-2xl text-white font-extrabold mb-4 max-[768px]:text-xl">
           {activeTab === "cortoplazo"
             ? "Objetivos a Corto Plazo"
             : "Objetivos a Largo Plazo"}

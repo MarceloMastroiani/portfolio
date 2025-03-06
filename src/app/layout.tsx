@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     icon: "./favicon.png",
   },
   openGraph: {
+    url: "https://marcelomastroiani-portfolio.vercel.app",
     title: "Marcelo Mastroiani - Portfolio",
     description: "Explore the work and projects of Marcelo Mastroiani.",
-    url: "https://marcelomastroiani-portfolio.vercel.app",
     images: [
       {
-        url: "/fondo-pantalla.webp",
-        width: 1200,
-        height: 630,
+        url: "https://marcelomastroiani-portfolio.vercel.app/fondo-pantalla.webp",
+        width: 800,
+        height: 600,
         alt: "Marcelo Mastroiani Portfolio",
       },
     ],
