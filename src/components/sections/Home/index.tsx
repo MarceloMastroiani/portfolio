@@ -23,14 +23,14 @@ export default function Home() {
   }, []);
 
   return (
-    <main id="home" className="flex flex-col w-full min-h-[100%]">
+    <main id="home" className="flex flex-col w-full">
       {/* section-container */}
-      <section className="flex items-center justify-between h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-primary] z-20 max-[768px]:flex-col max-[768px]:gap-y-8 max-[768px]:px-[2em] max-[768px]:py-[2em]">
+      <section className="flex items-center justify-between py-[4em] px-[8em] overflow-hidden bg-[--background-primary] z-20 max-[768px]:flex-col max-[768px]:gap-y-8 max-[768px]:px-[2em] max-[768px]:py-[2em]">
         {/* Imagen */}
 
         <div
           id="img"
-          className={`relative w-[40vw] mr-[4em] overflow-hidden animate-imgTransition max-[768px]:flex max-[768px]:items-center max-[768px]:justify-center max-[768px]:w-[50vw] max-[768px]:min-h-48 max-[768px]:mr-0`}
+          className={`relative w-[40vw] mr-[4em] overflow-hidden animate-imgTransition max-[768px]:flex max-[768px]:items-center max-[768px]:justify-center max-[768px]:w-[50vw]  max-[768px]:mr-0`}
         >
           <div
             id="imgDiv"

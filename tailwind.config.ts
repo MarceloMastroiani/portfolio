@@ -52,6 +52,17 @@ const config: Config = {
             opacity: "1",
           },
         },
+        diagonals1: {
+          "0%": {
+            transform: "translate(-500px, 0)",
+          },
+          "50%": {
+            transform: "translate(900px, 200px)",
+          },
+          "100%": {
+            transform: "translate(200px, 900px)",
+          },
+        },
       },
     },
   },
