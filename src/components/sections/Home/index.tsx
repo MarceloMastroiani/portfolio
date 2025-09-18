@@ -34,7 +34,7 @@ export default function Home() {
         >
           <div
             id="imgDiv"
-            className={`absolute top-0 w-full h-full rounded-3xl bg-[--color-primary] ${animation}`}
+            className={`absolute top-0 w-full h-full rounded-3xl md:rounded-3xl lg:rounded-3xl bg-[--color-primary] ${animation}`}
           >
             <Image
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
@@ -47,7 +47,7 @@ export default function Home() {
             />
           </div>
           <Image
-            className="rounded-3xl md:rounded-3xl lg:rounded-3xl"
+            className="rounded-none md:rounded-3xl lg:rounded-3xl"
             src={"/foto-perfil.webp"}
             alt="Profile picture of Marcelo Mastroiani"
             width={600}
