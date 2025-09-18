@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { montserrat } from "../fonts";
-import { nunito } from "../fonts";
+import { montserrat } from "@/components/fonts";
+import { nunito } from "@/components/fonts";
 
 interface Objetivo {
   titulo: string;

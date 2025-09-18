@@ -1,18 +1,14 @@
-@import "../../app/globals.css";
+@import "../../../app/globals.css";
 
-.button-open-close {
+/* .button-open-close {
   @apply fixed top-4 right-4 z-50 p-2 text-white rounded-md;
-}
-.nav-links {
+} */
+/* .nav-links {
   @apply flex-grow;
-}
+} */
 
 /* Media Queries RESPONSIVE */
 @media (max-width: 768px) {
-  .button-open-close {
-    @apply top-2 right-2;
-  }
-
   .nav-links ul li a {
     @apply hover:bg-[--background-sidebar] opacity-80;
   }

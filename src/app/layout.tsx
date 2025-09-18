@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Sidebar from "@/components/SideBar/SideBar";
+import Sidebar from "@/components/layout/SideBar/SideBar";
+import FooterContact from "@/components/layout/FooterContact/FooterContact";
+import { ReactLenis } from "lenis/react";
 
 //Cambiar al terminar
 export const metadata: Metadata = {
@@ -37,7 +39,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Sidebar />
-        {children}
+        <ReactLenis root>{children}</ReactLenis>
+        <FooterContact />
       </body>
     </html>
   );

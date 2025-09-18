@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { nunito } from "../fonts";
+import { nunito } from "@/components/fonts";
 
 interface SkillsItemsProps {
   name: string;

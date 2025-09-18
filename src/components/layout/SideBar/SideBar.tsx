@@ -3,12 +3,12 @@
 import "./SideBar.css";
 import { useState } from "react";
 import Link from "next/link";
-import Burger from "../ui/Burger/Burger";
+import Burger from "../../ui/Burger/Burger";
 
 const menuItems = [
-  { href: "/", label: "Inicio" },
-  { href: "/about", label: "Acerca de" },
-  { href: "/projects", label: "Proyectos" },
+  { href: "/#home", label: "Inicio" },
+  { href: "/#about", label: "Acerca de" },
+  { href: "/#projects", label: "Proyectos" },
 ];
 
 export default function Sidebar() {
@@ -18,7 +18,7 @@ export default function Sidebar() {
     <>
       {/* Botón para abrir el sidebar */}
       <button
-        className="button-open-close"
+        className="fixed top-4 right-4 z-50 p-2 text-white rounded-md max-[768px]:top-2 max-[768px]:right-2" //button-open-close
         onClick={() => {
           if (isOpen === false) {
             setIsOpen(true);
@@ -39,13 +39,15 @@ export default function Sidebar() {
           <div className="p-4 border-b border-gray-700 pt-14"></div>
 
           {/* Enlaces de navegación */}
-          <nav className="nav-links">
+
+          <nav className=" flex-grow">
+            {/*nav-links */}
             <ul className="p-4">
               {menuItems.map((item) => (
                 <li key={item.href} className="mb-4">
                   <Link
                     href={item.href}
-                    className="block p-2 rounded-md hover:bg-[--color-primary]"
+                    className="block p-2 rounded-md hover:bg-[--color-primary] max-[768px]:hover:bg-[--background-sidebar]  max-[768px]:opacity-80"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}

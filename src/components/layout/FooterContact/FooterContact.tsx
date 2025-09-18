@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { montserrat } from "../fonts";
+import { montserrat } from "../../fonts";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoNewspaperOutline } from "react-icons/io5";
