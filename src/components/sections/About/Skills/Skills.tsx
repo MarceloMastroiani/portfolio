@@ -19,8 +19,10 @@ export default function Skills() {
             Frontend
           </h2>
 
+          {/* TODO: MEJORAR ESTO */}
+
           {/* CONTENEDOR DE SKILLS-CONTENT-FRONTEND */}
-          <div className="grid grid-cols-5 gap-x-8 gap-y-5 items-center max-[768px]:grid-cols-2 max-[768px]:gap-x-4 max-[768px]:gap-y-3 ">
+          <div className="grid grid-cols-5 gap-x-8 gap-y-5 items-center max-[768px]:grid-cols-4 max-[768px]:gap-x-4 max-[768px]:gap-y-3 ">
             {/* se mapean los skillsFrontEnd y se manda a SkillsItems para mostrarlos */}
             {skillsFrontEnd.map((skill, index) => (
               <SkillsItems key={index} name={skill.name} icon={skill.icon} />
@@ -36,7 +38,7 @@ export default function Skills() {
           </h2>
 
           {/* CONTENEDOR DE SKILLS-CONTENT-BACKEND */}
-          <div className="grid grid-cols-5 gap-x-8 gap-y-5 items-center max-[768px]:grid-cols-1 max-[768px]:gap-x-4 max-[768px]:gap-y-3 ">
+          <div className="grid grid-cols-5 gap-x-8 gap-y-5 items-center max-[768px]:grid-cols-4 max-[768px]:gap-x-4 max-[768px]:gap-y-3 ">
             {/* se mapean los skillsBackEnd y se manda a SkillsItems para mostrarlos */}
             {skillsBackEnd.map((skill, index) => (
               <SkillsItems key={index} name={skill.name} icon={skill.icon} />

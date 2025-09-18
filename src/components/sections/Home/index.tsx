@@ -47,7 +47,7 @@ export default function Home() {
             />
           </div>
           <Image
-            className="rounded-3xl"
+            className="rounded-3xl lg:rounded-3xl"
             src={"/foto-perfil.webp"}
             alt="Profile picture of Marcelo Mastroiani"
             width={600}
