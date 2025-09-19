@@ -5,7 +5,7 @@ import { montserrat } from "@/components/fonts";
 export default function Skills() {
   return (
     <article
-      className={`${montserrat.className} flex flex-col items-center justify-center h-full font-extrabold overflow-hidden bg-[--background-primary] py-[4em] px-[8em] gap-y-8 z-30 max-[768px]:py-[2em] max-[768px]:px-[2em] max-[768px]:gap-y-4`}
+      className={`${montserrat.className} flex flex-col items-center justify-center  font-extrabold overflow-hidden bg-(--background-primary) py-[4em] px-[8em] gap-y-8 z-30 max-[768px]:py-[2em] max-[768px]:px-[2em] max-[768px]:gap-y-4`}
     >
       <h1 className="text-center text-white text-4xl mb-16 font-bold max-[768px]:text-2xl ">
         Tecnologias 💻

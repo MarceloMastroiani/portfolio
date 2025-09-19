@@ -36,6 +36,10 @@ export const skillsFrontEnd = [
     name: "Redux",
     icon: "/redux.svg",
   },
+  {
+    name: "Material UI",
+    icon: "/materialui.svg",
+  },
 ];
 
 // Array de skills de Backend
@@ -71,5 +75,13 @@ export const skillsBackEnd = [
   {
     name: "GitHub",
     icon: "/github.svg",
+  },
+  {
+    name: "Docker",
+    icon: "/docker.svg",
+  },
+  {
+    name: "PostgresSQL",
+    icon: "/postgresql.svg",
   },
 ];

@@ -4,6 +4,7 @@ import "./SideBar.css";
 import { useState } from "react";
 import Link from "next/link";
 import Burger from "../../ui/Burger/Burger";
+import { nunito } from "../../fonts";
 
 const menuItems = [
   { href: "/#home", label: "Inicio" },
@@ -30,24 +31,21 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-0 bg-[--background-sidebar] text-white transition-transform duration-300 ease-in-out transform ${
+        className={`fixed inset-0 bg-(--background-sidebar) text-white transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         } z-40`}
       >
-        <div className="flex flex-col h-full">
-          {/* Linea del sidebar */}
-          <div className="p-4 border-b border-gray-700 pt-14"></div>
-
+        <div className="flex flex-col pt-20">
           {/* Enlaces de navegación */}
 
-          <nav className=" flex-grow">
+          <nav className="grow">
             {/*nav-links */}
             <ul className="p-4">
               {menuItems.map((item) => (
                 <li key={item.href} className="mb-4">
                   <Link
                     href={item.href}
-                    className="block p-2 rounded-md hover:bg-[--color-primary] max-[768px]:hover:bg-[--background-sidebar]  max-[768px]:opacity-80"
+                    className={`${nunito.className} block p-2 font-bold text-2xl hover:text-(--color-primary) hover:scale-98 ease-in-out duration-300`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}

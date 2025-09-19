@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import React from "react";
 import "./globals.css";
 import Sidebar from "@/components/layout/SideBar/SideBar";
 import FooterContact from "@/components/layout/FooterContact/FooterContact";

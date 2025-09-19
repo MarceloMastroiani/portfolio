@@ -8,8 +8,8 @@ export default function app() {
   return (
     <>
       <Home />
-      <About />
       <Projects />
+      <About />
     </>
   );
 }

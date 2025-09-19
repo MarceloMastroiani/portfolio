@@ -21,20 +21,21 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
 
   return (
     <section
-      className={`${montserrat.className} flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-[--background-secondary]  z-30 max-[768px]:justify-center max-[768px]:py-[2em] max-[768px]:px-[2em]`}
+      className={`${montserrat.className} flex flex-col items-center justify-evenly h-screen py-[4em] px-[8em] overflow-hidden bg-(--background-secondary)  z-30 max-[768px]:justify-center max-[768px]:py-[2em] max-[768px]:px-[2em]`}
     >
       <h1 className="text-4xl font-extrabold mb-20 h-[10vh] text-white text-center max-[768px]:text-2xl">
         Mis objetivos 🎯
       </h1>
 
       {/* BOTONES */}
-      <div className="flex w-full mb-8 h-[10vh] justify-center ">
+      <div className="flex w-full gap-x-5 mb-8 h-[10vh] justify-center ">
         {/* BOTON DE CORTO PLAZO */}
+
         <button
-          className={`flex-1 py-2 px-4 text-center ${
+          className={`flex cursor-pointer items-center justify-center rounded-xl border-[1.58px] border-zinc-600  px-8 py-2.5 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:bg-zinc-900 hover:shadow-xl  ${
             activeTab === "cortoplazo"
-              ? "bg-[--color-primary] text-white"
-              : "bg-[--background-sidebar] text-white"
+              ? "bg-(--color-primary) text-white"
+              : "bg-(--background-sidebar) text-white"
           }`}
           //Se setea el estado SETACTIVETAB con el valor "cortoplazo"
           onClick={() => setActiveTab("cortoplazo")}
@@ -43,10 +44,10 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
         </button>
         {/* BOTON DE LARGO PLAZO */}
         <button
-          className={`flex-1 py-2 px-4 text-center ${
+          className={`flex cursor-pointer items-center justify-center rounded-xl border-[1.58px] border-zinc-600  px-8 py-2.5 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:bg-zinc-900 hover:shadow-xl ${
             activeTab === "largoplazo"
-              ? "bg-[--color-primary] text-white"
-              : "bg-[--background-sidebar] text-white"
+              ? "bg-(--color-primary) text-white"
+              : "bg-(--background-sidebar) text-white"
           }`}
           //Se setea el estado SETACTIVETAB con el valor "largoplazo"
           onClick={() => setActiveTab("largoplazo")}
@@ -69,7 +70,7 @@ export default function Goals({ cortoplazo, largoplazo }: ObjetivosProps) {
             (objetivo, index) => (
               //Se crea un indice para cada objetivo
               <li key={index} className="border-b pb-4 last:border-b-0">
-                <h3 className="font-bold text-[--color-primary] text-lg">
+                <h3 className="font-bold text-(--color-primary) text-lg">
                   {objetivo.titulo}
                 </h3>
                 <p

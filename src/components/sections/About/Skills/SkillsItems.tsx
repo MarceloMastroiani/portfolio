@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { nunito } from "@/components/fonts";
+import React from "react";
 
 interface SkillsItemsProps {
   name: string;
