@@ -33,7 +33,36 @@ export const projects = [
     ],
   },
   {
-    title: "proyecto peliculas",
+    title: "E-commerce CoderHouse",
+    imagen: "/ecomerce-react.webp",
+    description:
+      "E-commerce desarrollado como proyecto final del curso de React en Coderhouse. Construido con React y Vite, conectado a Firebase para la base de datos. Incluye componentes reutilizables, carrito de compras y flujo optimizado para escalar nuevas funcionalidades.",
+    urlCode: "https://github.com/MarceloMastroiani/Frontend-react-vite",
+    svgs: [
+      {
+        alt: "react",
+        svg: "/react.svg",
+      },
+      {
+        alt: "vite",
+        svg: "/vitejs.svg",
+      },
+      {
+        alt: "javaScript",
+        svg: "/javascript.svg",
+      },
+      {
+        alt: "css",
+        svg: "/css_old.svg",
+      },
+      {
+        alt: "firebase",
+        svg: "/firebase.svg",
+      },
+    ],
+  },
+  {
+    title: "Proyecto peliculas",
     imagen: "/peliculas.webp",
     description:
       "Aplicación web interactiva desarrollada con React y Vite, que consume la API pública de OMDB para mostrar información detallada sobre películas. Implementación de búsqueda dinámica, manejo de estados con hooks y optimización de rendimiento con Vite.",
@@ -42,6 +71,10 @@ export const projects = [
       {
         alt: "react",
         svg: "/react.svg",
+      },
+      {
+        alt: "vite",
+        svg: "/vitejs.svg",
       },
       {
         alt: "css",
