@@ -1,18 +1,18 @@
 export const objetivosCortoplazo = [
   {
-    titulo: "Fortalecer mis habilidades a través de proyectos prácticos",
+    titulo: "Dominar System Design de aplicaciones reales",
     descripcion:
-      "Desarrollar proyectos reales para aplicar mis conocimientos, ganar experiencia en la resolución de problemas técnicos.",
+      "Estudiar y diseñar arquitecturas para casos como Twitter, Netflix, Uber. Practicar trade-offs entre consistencia, disponibilidad y particionado. Implementar 2-3 diseños complejos desde cero.",
   },
   {
-    titulo: "Aprender sobre microservicios",
+    titulo: "Especializarme en microservicios y APIs robustas",
     descripcion:
-      " Estudiar y aplicar arquitecturas de microservicios para desarrollar sistemas escalables y eficientes.",
+      " Construir sistemas distribuidos con patrones como Circuit Breaker, Saga, CQRS. Implementar API gateways, service mesh, y manejo avanzado de errores y retry policies.",
   },
   {
-    titulo: "Ser más activo en redes profesionales",
+    titulo: "Profundizar en bases de datos y performance",
     descripcion:
-      "Participar en LinkedIn y otras redes, compartiendo contenido e interactuando para ampliar mi red profesional.",
+      "Aprender database sharding, replicación master-slave, indexing avanzado, query optimization y caching strategies con Redis. Experimentar con bases NoSQL especializadas.",
   },
 ];
 
@@ -23,8 +23,13 @@ export const objetivosLargoplazo = [
       "Trabajar en una empresa líder para mejorar mis habilidades y asumir desafíos más complejos en el desarrollo tecnológico",
   },
   {
-    titulo: "Convertirme en un referente en mi campo",
+    titulo: "Convertirme en arquitecto de sistemas backend",
     descripcion:
-      "Compartir mis conocimientos a través de proyectos y colaboraciones para contribuir al avance tecnológico.",
+      "Ser capaz de diseñar sistemas que manejen millones de requests, con alta disponibilidad, bajo latency y fault tolerance. Dominar patrones de arquitectura enterprise.",
+  },
+  {
+    titulo: "Construir un portfolio de sistemas complejos",
+    descripcion:
+      "Tener 3-5 proyectos que demuestren experiencia en diferentes dominios: e-commerce escalable, sistema de mensajería masiva, plataforma de analytics, etc.",
   },
 ];

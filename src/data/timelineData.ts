@@ -1,21 +1,29 @@
 export const timelineData = [
   {
     date: "2023",
-    title: "Primeros pasos",
+    title: "Fundamentos & Desarrollo Frontend",
+    certification: "Frontend Web Development - CoderHouse",
+    stack:
+      "HTML5, CSS3, JavaScript ES6+, React.js, Firebase, Next.js, Tailwind CSS",
     description:
-      "Empece mi formación en desarrollo web con los cursos de Coderhouse, aprendiendo HTML, CSS, JavaScript y React. Realicé varios proyectos personales para practicar, aplicando lo aprendido y fortaleciendo mis habilidades técnicas. Además, hice mi primera incursión en bases de datos utilizando Firebase",
+      "Comenzé mi especialización en desarrollo web a través de CoderHouse, construyendo una base sólida desde HTML y CSS hasta tecnologías modernas. Desarrollé una calculadora de préstamos con JavaScript vanilla que incluía algoritmos de cálculo financiero y validación de formularios. Mi proyecto más significativo fue un e-commerce completo en React integrado con Firebase, donde implementé un sistema CRUD de productos, gestión de inventario en tiempo real y autenticación de usuarios. También creé una aplicación de búsqueda de películas que me permitió profundizar en el manejo de APIs externas y estados complejos. Finalicé el año desarrollando mi portfolio profesional con Next.js y Tailwind CSS, optimizado para SEO y performance.",
   },
 
   {
-    date: "2023/2024",
-    title: "Descubriendo lo que me apasiona",
+    date: "2024",
+    title: "Especialización Backend & Arquitectura",
+    certification: "Backend Programming - CoderHouse",
+    stack:
+      "Node.js, Express.js, MongoDB, NestJS, JWT, Stripe API, Socket.io, Jest, Prisma, NATS, Docker",
     description:
-      "Durante este período, me especialicé en el desarrollo backend a través del curso de Programación Backend en Coderhouse. Aprendí a usar Express con Node.js y bases de datos NoSQL como MongoDB. Creé APIs robustas que incluían autenticación, pasarelas de pago, mensajería, un chat en vivo y pruebas automatizadas. Con esta sólida base, arranqué a trabajar con frameworks como NestJS, lo que me permitió construir sistemas más estructurados y escalables. En el área del frontend, me mantuve actualizado con las tecnologías más demandadas, incluyendo Next.js, con el cual desarrollé mi portafolio, aplicando un diseño moderno y funcional.",
+      "Me especialicé en desarrollo backend a través del curso de Programación Backend en CoderHouse, donde construí una API de e-commerce completa usando Node.js y Express. Esta API incluía un sistema de autenticación JWT con refresh tokens, integración de pagos con Stripe incluyendo webhooks, y un chat en tiempo real con Socket.io.Posteriormente, evolucione hacia NestJS para desarrollar un sistema de microservicios, implementando arquitectura modular escalable con message patterns usando NATS, base de datos distribuida con Prisma ORM, y manejo centralizado de errores y logging",
   },
   {
-    date: "2025/Actualidad",
-    title: "Desarrollo de Ecommerce y Formación Continua",
+    date: "2025 - Presente",
+    title: "Experiencia Profesional & Desarrollo Enterprise",
+    certification: "Full Stack Developer / WordPress - JuninSoft",
+    stack: "NestJS, PostgreSQL, WordPress, Docker, Next.js, TypeScript",
     description:
-      "Actualmente, estoy trabajando en un proyecto de ecommerce en el que me encargo de la parte del servidor, utilizando NestJS. Aplico mis conocimientos previos mientras sigo aprendiendo y mejorando mis habilidades. Además, continúo formándome, enfocándome en aprender sobre microservicios y bases de datos SQL, lo que me permite expandir mi experiencia. Hoy en día, estoy en busca de nuevas oportunidades laborales donde pueda aplicar lo aprendido y seguir creciendo como desarrollador.",
+      "Actualmente trabajo como Full Stack Developer en JuninSoft, una startup especializada en desarrollo de software que combina soluciones custom con WordPress. Mi rol incluye el desarrollo de aplicaciones web usando stack moderno como NestJS, React y PostgreSQL, así como la implementación de soluciones WordPress personalizadas para clientes corporativos.",
   },
 ];

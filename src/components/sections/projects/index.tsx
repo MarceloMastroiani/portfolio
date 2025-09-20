@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     // TODO: Actualizar la data que Projects
     <main id="projects" className=" flex flex-col w-full ">
-      <section className="flex items-center justify-center py-[4em] px-[8em] overflow-hidden bg-(--background-primary) z-20">
+      <section className="flex items-center justify-center py-[4em] px-2 md:px-[4em] 2xl:px-[12em] bg-(--background-primary) z-20">
         <PopupsModal projectArr={projects} />
       </section>
     </main>

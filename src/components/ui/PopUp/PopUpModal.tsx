@@ -1,23 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import { ProjectModalProps } from "./entitis";
-import ButtonHover from "../Button/buttonHover"; // replace './ButtonHover' with the correct path
+import ButtonHover from "../Button/buttonHover";
 
 const PopupsModal = ({ projectArr }: ProjectModalProps) => {
   return (
-    <div className="w-11/12 pt-28 pb-14">
-      <h1 className="text-center text-white text-4xl mb-16 font-bold max-[768px]:text-2xl ">
+    <div className="flex flex-col items-center w-[100%] lg:w-[90%] pb-14">
+      <h1 className="text-white text-2xl font-bold md:text-4xl pb-20">
         Proyectos
       </h1>
 
-      <section className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-3 justify-items-center">
-        {/* Mapear el array de Popups */}
+      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {projectArr.map((project, index) => (
           <div
             key={index}
-            className="w-86 bg-[var(--background-sidebar)] rounded-xl shadow-2xl pb-4"
+            // ✅ AGREGAR: h-full flex flex-col para que la card use toda la altura disponible
+            className="bg-[var(--background-sidebar)] rounded-xl pb-4 h-full flex flex-col"
           >
-            {/* Contenedor de los redondeles de colores */}
+            {/* Contenedor de los redondeles de colores - MANTENER FIJO */}
             <div className="flex items-center p-3">
               <div className="px-1">
                 <span className="w-4 h-4 rounded-full inline-block bg-red-500"></span>
@@ -30,87 +30,74 @@ const PopupsModal = ({ projectArr }: ProjectModalProps) => {
               </div>
             </div>
 
-            {/* Contenedor con el contenido */}
-            <div>
+            <div className="flex flex-col flex-grow">
               <Image
-                className="rounded-3xl min-w-full max-h-72 p-4 object-cover"
+                className="rounded-3xl min-w-full object-cover p-4"
                 src={project.imagen}
                 alt={project.title}
                 width={100}
                 height={100}
+                loading="lazy"
               />
-              <div className="flex flex-col px-4 gap-y-4 ">
-                <h2 className="mt-0.5 text-lg font-bold text-gray-900 dark:text-white">
-                  {project.title}
-                </h2>
-                <div className="flex flex-col flex-wrap gap-4">
-                  <p className="text-sm text-white font-medium">
-                    {project.description}
-                  </p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.svgs?.map((svg, index) => (
-                      <Image
-                        className="w-10 h-10 p-2 bg-(--background-primary) rounded-full border border-[#bcb7b760] md:hover:border-[#bcb7b7] md:hover:scale-105 md:duration-300 ease-in-out"
-                        key={index}
-                        src={svg.svg}
-                        alt={svg.alt}
-                        width={100}
-                        height={100}
-                      />
-                    ))}
+              <div className="flex flex-col px-4 gap-y-4 flex-grow">
+                {/* Contenido superior que crece */}
+                <div className="flex-grow">
+                  {/* Título */}
+                  <div>
+                    <h2 className="mt-0.5 text-lg font-bold text-gray-900 dark:text-white">
+                      {project.title}
+                    </h2>
+                  </div>
+
+                  {/* Descripción e iconos */}
+                  <div className="flex flex-col flex-wrap gap-y-4 mt-4">
+                    <p className="text-sm text-white font-medium">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.svgs?.map((svg, svgIndex) => (
+                        <Image
+                          className="w-10 h-10 p-2 bg-(--background-primary) rounded-full border border-[#bcb7b760] md:hover:border-[#bcb7b7] md:hover:scale-105 md:duration-300 ease-in-out"
+                          key={svgIndex}
+                          src={svg.svg}
+                          alt={svg.alt}
+                          width={100}
+                          height={100}
+                          loading="lazy"
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  {/* Si project.urlDemo existe y es un valor "truthy" (&& => no es null, undefined, false, 0, ""), entonces renderiza lo que está dentro de los paréntesis. */}
-                  {project.urlDemo && (
-                    <ButtonHover
-                      propsButton={{
-                        text: "Demo",
-                        link: project.urlDemo,
-                        image: "/external-link.svg",
-                      }}
-                    />
-                  )}
-                  <ButtonHover
-                    propsButton={{
-                      text: "Código",
-                      link: project.urlCode,
-                      image: "/github.svg",
-                    }}
-                  />
+                <div className="mt-auto pt-4">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
+                    {project.urlDemo && (
+                      <ButtonHover
+                        propsButton={{
+                          text: "Demo",
+                          link: project.urlDemo,
+                          image: "/external-link.svg",
+                        }}
+                      />
+                    )}
+
+                    {project.urlCode && (
+                      <ButtonHover
+                        propsButton={{
+                          text: "Código",
+                          link: project.urlCode,
+                          image: "/github.svg",
+                        }}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          // <article
-          //   key={index}
-          //   className="rounded-t-[50%] rounded-b-xl pb-4 bg-(--background-sidebar)"
-          // >
-          //   <div className="flex flex-col gap-1 ">
-          // <Image
-          //   className="rounded-3xl min-w-full max-h-[300px] object-cover"
-          //   src={project.imagen}
-          //   alt={project.title}
-          //   width={100}
-          //   height={100}
-          // />
-          // <div className="px-4 pt-6 flex flex-col gap-y-4 ">
-          //   <h2 className="mt-0.5 text-lg font-bold text-gray-900 dark:text-white">
-          //     {project.title}
-          //   </h2>
-          //   <p className="text-sm text-white font-medium">
-          //     {project.description}
-          //   </p>
-
-          //   <ButtonHover
-          //     propsButton={{ text: "Código", link: project.urlCode }}
-          //   />
-          // </div>
-          //   </div>
-          // </article>
         ))}
       </section>
     </div>

@@ -17,6 +17,8 @@ export default function Timeline() {
             date={item.date}
             title={item.title}
             description={item.description}
+            certification={item.certification}
+            stack={item.stack}
           />
         ))}
       </div>

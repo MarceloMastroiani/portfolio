@@ -13,7 +13,7 @@ interface PropsButtonHover {
 
 const buttonHover = ({ propsButton }: PropsButtonHover) => {
   return (
-    <div className="flex items-center justify-end pt-">
+    <div>
       <button className="flex cursor-pointer items-center justify-center rounded-xl border-[1.58px] border-zinc-600 bg-[var(--background-primary)] px-8 py-2.5 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:bg-zinc-900 hover:shadow-xl">
         <a
           href={propsButton.link}
