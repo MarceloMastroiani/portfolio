@@ -60,7 +60,7 @@ export default function Home() {
         <div className="flex flex-col h-full justify-start gap-y-4 z-100 text-balance text-center bg-(--background-primary) md:w-[50%] md:justify-center md:gap-y-6 md:text-left">
           <div>
             <h1
-              className={`${montserrat.className} text-white text-xl md:w-[80%] md:text-xl xl:text-3xl 2xl:text-4xl  `}
+              className={`${montserrat.className} text-white text-xl md:w-[90%] md:text-xl xl:text-3xl 2xl:text-4xl  `}
             >
               ¡Hola! Soy{" "}
               <span className="text-(--color-primary)">Marcelo Mastroiani</span>{" "}
@@ -77,10 +77,10 @@ export default function Home() {
           <div className="flex w-full justify-center md:justify-start animate-pulse">
             <Link
               href="/#about"
-              className={`${montserrat.className} flex w-64 cursor-pointer items-center justify-center text-sm md:text-md 2xl:text-lg rounded-xl border-[1.58px] border-zinc-600 py-2 md:px-2 lg:px-6 lg:py-1 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:bg-zinc-900 hover:shadow-xl md:w-1/2`}
+              className={`${montserrat.className} flex w-1/2 md:w-auto cursor-pointer items-center justify-center text-sm md:text-md 2xl:text-lg rounded-xl border-[1.58px] border-zinc-600 py-2 md:px-2 lg:px-6 lg:py-1 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:bg-zinc-900 hover:shadow-xl `}
             >
               Descubre más sobre mí
-              <IoIosArrowRoundForward className="inline text-2xl pl-1 md:text-5xl" />
+              <IoIosArrowRoundForward className="inline text-2xl pl-1 md:text-4xl" />
             </Link>
           </div>
         </div>

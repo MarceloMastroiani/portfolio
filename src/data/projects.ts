@@ -30,22 +30,6 @@ export const projects = [
         alt: "docker",
         svg: "/docker.svg",
       },
-      {
-        alt: "prisma",
-        svg: "/prisma.svg",
-      },
-      {
-        alt: "postgresql",
-        svg: "/postgresql.svg",
-      },
-      {
-        alt: "mongodb",
-        svg: "/mongodb.svg",
-      },
-      {
-        alt: "docker",
-        svg: "/docker.svg",
-      },
     ],
   },
   {
