@@ -48,7 +48,7 @@ export default function FooterContact() {
           <FaGithub className="inline " />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/marcelo-mastroiani/"
+          href="https://www.linkedin.com/in/marcelo-mastroiani"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Linkedin"
@@ -58,7 +58,7 @@ export default function FooterContact() {
         </Link>
         <Link
           //problema con el link
-          href="/CV Marcelo Mastroiani.pdf"
+          href="/CV-MarceloMastroiani.pdf"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="CV"

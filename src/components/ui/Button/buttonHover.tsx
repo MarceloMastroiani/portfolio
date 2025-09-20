@@ -17,6 +17,7 @@ const buttonHover = ({ propsButton }: PropsButtonHover) => {
       <button className="flex cursor-pointer items-center justify-center rounded-xl border-[1.58px] border-zinc-600 bg-[var(--background-primary)] px-8 py-2.5 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:bg-zinc-900 hover:shadow-xl">
         <a
           href={propsButton.link}
+          target="_blank"
           className="flex gap-2 text-slate-300/85 text-sm font-semibold"
         >
           {propsButton.text}
