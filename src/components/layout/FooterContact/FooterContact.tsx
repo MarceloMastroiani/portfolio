@@ -17,7 +17,7 @@ export default function FooterContact() {
         <p
           className={`${montserrat.className} text-3xl text-white animate-pulse opacity-70 hover:opacity-100 hover:text-(--color-primary) hover:scale-105 ease-in-out duration-300 max-lg:text-xl max-md:text-lg max-lg:hover:opacity-70 max-lg:hover:text-white max-lg:hover:scale-100 `}
         >
-          mastroianimarcelo04@gmail.com 👆
+          mastroianimarcelo04@gmail.com
         </p>
       </Link>
 

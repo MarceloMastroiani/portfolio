@@ -8,7 +8,7 @@ export default function Skills() {
       className={`${montserrat.className} flex flex-col items-center justify-center  font-extrabold overflow-hidden bg-(--background-primary) py-[4em] px-[8em] gap-y-8 z-30 max-[768px]:py-[2em] max-[768px]:px-[2em] max-[768px]:gap-y-4`}
     >
       <h1 className="text-center text-white text-4xl mb-16 font-bold max-[768px]:text-2xl ">
-        Tecnologias 💻
+        Tecnologias
       </h1>
       {/* SECCION DE FRONTEND Y BACKEND */}
       <section className="flex flex-col items-center gap-y-16 w-full max-[768px]:gap-x-3">

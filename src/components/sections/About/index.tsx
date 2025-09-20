@@ -1,7 +1,5 @@
 import Timeline from "@/components/sections/About/Timeline/Timeline";
-import Goals from "@/components/sections/About/Goals/Goals";
 import Skills from "@/components/sections/About/Skills/Skills";
-import { objetivosCortoplazo, objetivosLargoplazo } from "@/data/goals";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,12 +16,6 @@ export default function AboutMe() {
     <main id="about" className="relative flex flex-col">
       {/* section con linea de tiempo */}
       <Timeline />
-
-      {/* section con objetivos */}
-      <Goals
-        cortoplazo={objetivosCortoplazo}
-        largoplazo={objetivosLargoplazo}
-      />
 
       {/* section con skills */}
       <Skills />
