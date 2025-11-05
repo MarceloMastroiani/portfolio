@@ -35,8 +35,8 @@ const PopupsModal = ({ projectArr }: ProjectModalProps) => {
                 className="rounded-3xl min-w-full object-cover p-4"
                 src={project.imagen}
                 alt={project.title}
-                width={100}
-                height={100}
+                width={600}
+                height={400}
                 loading="lazy"
               />
 
