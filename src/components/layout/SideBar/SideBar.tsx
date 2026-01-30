@@ -8,8 +8,11 @@ import { nunito } from "../../fonts";
 
 const menuItems = [
   { href: "/#home", label: "Inicio" },
-  { href: "/#projects", label: "Proyectos" },
   { href: "/#about", label: "Acerca de" },
+  { href: "/#experience", label: "Experiencia" },
+  { href: "/#projects", label: "Proyectos" },
+  { href: "/#skills", label: "Habilidades" },
+  { href: "/#contact", label: "Contacto" },
 ];
 
 export default function Sidebar() {

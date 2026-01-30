@@ -1,6 +1,7 @@
 import { Metadata } from "next";
-import PopupsModal from "@/components/ui/PopUp/PopUpModal";
-import { projects } from "@/data/projects";
+// import PopupsModal from "@/components/ui/PopUp/PopUpModal";
+// import { projects } from "@/data/projects";
+import ProjectX from "./project-me/projectx";
 
 export const metadata: Metadata = {
   title: "Marcelo Mastroiani - Proyectos",
@@ -14,8 +15,9 @@ export default function Projects() {
   return (
     // TODO: Actualizar la data que Projects
     <main id="projects" className=" flex flex-col w-full ">
-      <section className="flex items-center justify-center py-[4em] px-2 md:px-[4em] 2xl:px-[12em] bg-(--background-primary) z-20">
-        <PopupsModal projectArr={projects} />
+      <section className="bg-neutral-950 z-20">
+        {/* <PopupsModal projectArr={projects} /> */}
+        <ProjectX />
       </section>
     </main>
   );
