@@ -49,9 +49,11 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-neutral-950 shadow-2xl">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-red-500 font-medium mb-2">Trabajemos juntos</p>
+          <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">
+            Trabajemos juntos
+          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Contacto
+            Contacto<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
         </div>

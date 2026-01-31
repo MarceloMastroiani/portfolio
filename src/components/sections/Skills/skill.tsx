@@ -19,9 +19,21 @@ import {
   SiGithub,
   SiDocker,
   SiPostgresql,
+  SiKubernetes,
 } from "react-icons/si";
 
 const techStack = [
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "Express", icon: SiExpress },
+  { name: "NestJS", icon: SiNestjs },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Firebase", icon: SiFirebase },
+  { name: "Prisma", icon: SiPrisma },
+  { name: "Git", icon: SiGit },
+  { name: "GitHub", icon: SiGithub },
+  { name: "Docker", icon: SiDocker },
+  { name: "Kubernetes", icon: SiKubernetes },
   { name: "HTML5", icon: SiHtml5 },
   { name: "CSS3", icon: SiCss3 },
   { name: "SASS", icon: SiSass },
@@ -32,16 +44,6 @@ const techStack = [
   { name: "Next.js", icon: SiNextdotjs },
   { name: "Redux", icon: SiRedux },
   { name: "Material UI", icon: SiMui },
-  { name: "Node.js", icon: SiNodedotjs },
-  { name: "Express", icon: SiExpress },
-  { name: "NestJS", icon: SiNestjs },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "Firebase", icon: SiFirebase },
-  { name: "Prisma", icon: SiPrisma },
-  { name: "Git", icon: SiGit },
-  { name: "GitHub", icon: SiGithub },
-  { name: "Docker", icon: SiDocker },
-  { name: "PostgreSQL", icon: SiPostgresql },
 ];
 
 export function Skills() {
@@ -53,7 +55,7 @@ export function Skills() {
             Mi Arsenal
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Tech Stack<span className="text-red-500">.</span>
+            Tecnologías<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
         </div>

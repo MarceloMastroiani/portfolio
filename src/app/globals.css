@@ -175,6 +175,9 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   margin: 0;

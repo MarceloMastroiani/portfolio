@@ -43,7 +43,7 @@ export default function Hero() {
             >
               <div
                 id="imgDiv"
-                className={`absolute top-0 w-[80%] h-full rounded-3xl bg-(--color-primary) ${animation} md:w-80 md:h-80`}
+                className={`absolute top-0 w-full h-full rounded-3xl bg-(--color-primary)  ${animation} md:w-80 md:h-80`}
               >
                 <Image
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
@@ -69,7 +69,7 @@ export default function Hero() {
 
             {/* Content */}
             <div className="flex-1 text-center lg:text-left">
-              <p className="text-red-500 font-medium mb-3 tracking-wide">
+              <p className="text-red-500 font-medium mb-3 tracking-widest uppercase text-sm">
                 ¡Hola! Soy
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 text-balance">
@@ -104,7 +104,7 @@ export default function Hero() {
               {/* Social Links */}
               <div className="flex items-center gap-4 justify-center lg:justify-start">
                 <a
-                  href="https://github.com/marcelomastroiani"
+                  href="https://github.com/MarceloMastroiani"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-400 hover:text-white transition-colors"
@@ -113,7 +113,7 @@ export default function Hero() {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/marcelomastroiani"
+                  href="https://www.linkedin.com/in/marcelo-mastroiani/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-400 hover:text-white transition-colors"
@@ -122,7 +122,7 @@ export default function Hero() {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="mailto:contacto@marcelomastroiani.com"
+                  href="mailto:mastroianimarcelo04@gmail.com"
                   className="p-3 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-400 hover:text-white transition-colors"
                   aria-label="Email"
                 >

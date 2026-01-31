@@ -1,46 +1,57 @@
 const experiences = [
   {
     year: "2025 - Presente",
-    title: "Full Stack Developer / WordPress",
+    title: "WordPress Developer (Freelance)",
     company: "JuninSoft",
     description:
-      "Actualmente trabajo como Full Stack Developer en JuninSoft, una startup especializada en desarrollo de software que combina soluciones custom con WordPress. Mi rol incluye el desarrollo de aplicaciones web usando stack moderno como NestJS, React y PostgreSQL, así como la implementación de soluciones WordPress personalizadas para clientes corporativos.",
-    technologies: [
-      "NestJS",
-      "PostgreSQL",
-      "WordPress",
-      "Docker",
-      "Next.js",
-      "TypeScript",
-    ],
+      "Trabajo como desarrollador freelance para JuninSoft, participando en el desarrollo, personalización y mantenimiento de sitios web realizados con WordPress. Mi rol incluye la implementación de funcionalidades a medida, ajustes de rendimiento, integración de plugins y adaptación de soluciones según los requerimientos de cada cliente.",
+    technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
     side: "left",
   },
   {
+    year: "2025 - Presente",
+    title: "Full Stack Developer (Freelance)",
+    company: "Independiente",
+    description:
+      "Trabajo de forma independiente como desarrollador Full Stack, enfocado principalmente en el desarrollo backend. Diseño y desarrollo APIs REST, manejo autenticación, bases de datos y lógica de negocio, además de integrar servicios externos y colaborar en el desarrollo frontend cuando el proyecto lo requiere.",
+    technologies: [
+      "NestJS",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "MongoDB",
+      "JWT",
+      "React",
+      "Docker",
+    ],
+    side: "right",
+  },
+  {
     year: "2024",
-    title: "Specialization Backend & Architecture",
+    title: "Backend Specialization",
     company: "CoderHouse",
     description:
-      "Me especialicé en desarrollo backend a través del curso de Programación Backend en CoderHouse, donde construí una API de e-commerce completa usando Node.js y Express. Esta API incluía un sistema de autenticación JWT con refresh tokens, integración de pagos con Stripe incluyendo webhooks, y un chat en tiempo real con Socket.io. Posteriormente, evolucioné hacia NestJS para desarrollar un sistema de microservicios.",
+      "Me especialicé en desarrollo backend a través del curso de Programación Backend en CoderHouse. Durante la cursada desarrollé una API de e-commerce utilizando Node.js y Express, con autenticación JWT, manejo de roles, integración de pagos con Stripe y un sistema de chat en tiempo real con Socket.io. Como evolución del aprendizaje, comencé a trabajar con NestJS y conceptos de arquitectura y microservicios.",
     technologies: ["Node.js", "Express.js", "MongoDB", "NestJS", "JWT"],
-    side: "right",
+    side: "left",
   },
   {
     year: "2023",
     title: "Frontend Development",
     company: "CoderHouse",
     description:
-      "Completé mi formación en desarrollo frontend, aprendiendo React, JavaScript moderno y las mejores prácticas de desarrollo web. Construí múltiples proyectos incluyendo aplicaciones interactivas y sitios web responsivos.",
+      "Completé mi formación en desarrollo frontend, enfocándome en JavaScript moderno y React. Desarrollé proyectos prácticos que incluyeron aplicaciones interactivas, manejo de estado y maquetado de interfaces responsivas aplicando buenas prácticas de desarrollo web.",
     technologies: ["React", "JavaScript", "HTML", "CSS", "SASS"],
-    side: "left",
+    side: "right",
   },
   {
     year: "2022",
     title: "Inicio en Programación",
     company: "Autodidacta",
     description:
-      "Comencé mi viaje en el mundo de la programación, aprendiendo los fundamentos de HTML, CSS y JavaScript. Desarrollé mis primeros proyectos personales y descubrí mi pasión por el desarrollo web.",
+      "Comencé a aprender programación de forma autodidacta, incorporando los fundamentos de HTML, CSS y JavaScript. Realicé mis primeros proyectos personales, aprendiendo control de versiones con Git y sentando las bases para el desarrollo web.",
     technologies: ["HTML", "CSS", "JavaScript", "Git"],
-    side: "right",
+    side: "left",
   },
 ];
 
@@ -53,7 +64,7 @@ export default function Experience() {
             Mi Trayectoria
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Experience<span className="text-red-500">.</span>
+            Experiencia<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
         </div>
@@ -77,7 +88,7 @@ export default function Experience() {
                       : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 hover:border-red-500/30 transition-colors">
+                  <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 hover:scale-105 transition-all duration-300">
                     <span className="text-red-500 font-medium text-sm">
                       {exp.year}
                     </span>

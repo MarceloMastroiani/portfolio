@@ -29,9 +29,11 @@ export default function AboutMe() {
     <section id="about" className="py-24 bg-neutral-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-primary font-medium mb-2">Conóceme</p>
+          <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">
+            Conóceme
+          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Sobre mí
+            Sobre mí<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </div>
