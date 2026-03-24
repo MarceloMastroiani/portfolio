@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/FooterContact/footer";
 import { Navigation } from "@/components/layout/Navigation/navigation";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
-import Hero from "@/components/sections/Home";
+import Hero from "@/components/sections/Home/Hero";
 import { Skills } from "@/components/sections/Skills/skill";
 import Projects from "@/components/sections/projects";
 

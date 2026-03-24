@@ -1,11 +1,11 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { ReactLenis } from 'lenis/react';
-import { Toaster } from 'react-hot-toast';
-import './index.css';
-import App from './App.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { ReactLenis } from "lenis/react";
+import { Toaster } from "react-hot-toast";
+import "./index.css";
+import App from "./App.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ReactLenis root>
       <App />
@@ -21,5 +21,5 @@ createRoot(document.getElementById('root')!).render(
         }}
       />
     </ReactLenis>
-  </StrictMode>
+  </StrictMode>,
 );
