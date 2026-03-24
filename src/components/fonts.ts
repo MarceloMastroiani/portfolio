@@ -1,15 +1,3 @@
-//Buscar fuentes en google fonts y importarlas aca
-import { Montserrat } from "next/font/google";
-import { Nunito } from "next/font/google";
-
-//Anchos sugeridos: 600 (semi-bold) o 700 (bold)
-export const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-});
-
-//Anchos sugeridos: 400 (regular) o 300 (light)
-export const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
+// Las fuentes se cargarán globalmente en index.html o css
+export const montserrat = { className: "font-montserrat" };
+export const nunito = { className: "font-nunito" };

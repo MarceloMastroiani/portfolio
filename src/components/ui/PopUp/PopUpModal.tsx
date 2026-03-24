@@ -1,5 +1,4 @@
-import React from "react";
-import Image from "next/image";
+
 import { ProjectModalProps } from "./entitis";
 import ButtonHover from "../Button/buttonHover";
 
@@ -31,7 +30,7 @@ const PopupsModal = ({ projectArr }: ProjectModalProps) => {
             </div>
 
             <div className="flex flex-col flex-grow">
-              <Image
+              <img
                 className="rounded-3xl min-w-full object-cover p-4"
                 src={project.imagen}
                 alt={project.title}
@@ -58,7 +57,7 @@ const PopupsModal = ({ projectArr }: ProjectModalProps) => {
 
                     <div className="flex flex-wrap gap-2">
                       {project.svgs?.map((svg, svgIndex) => (
-                        <Image
+                        <img
                           className="w-10 h-10 p-2 bg-(--background-primary) rounded-full border border-[#bcb7b760] md:hover:border-[#bcb7b7] md:hover:scale-105 md:duration-300 ease-in-out"
                           key={svgIndex}
                           src={svg.svg}

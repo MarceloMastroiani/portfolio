@@ -1,15 +1,6 @@
-import { Metadata } from "next";
 // import PopupsModal from "@/components/ui/PopUp/PopUpModal";
 // import { projects } from "@/data/projects";
 import ProjectX from "./project-me/projectx";
-
-export const metadata: Metadata = {
-  title: "Marcelo Mastroiani - Proyectos",
-  description: "Check out Marcelo's latest projects.",
-  icons: {
-    icon: "./favicon.png",
-  },
-};
 
 export default function Projects() {
   return (

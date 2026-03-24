@@ -1,11 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { montserrat } from "@/components/fonts";
+
 import { useEffect, useState } from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { ArrowDown, FileUser, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   const [animation, setAnimation] = useState("");
@@ -45,25 +42,21 @@ export default function Hero() {
                 id="imgDiv"
                 className={`absolute top-0 w-full h-full rounded-3xl bg-(--color-primary)  ${animation} md:w-80 md:h-80`}
               >
-                <Image
+                <img
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
                   src="/smile.svg"
                   alt="smile"
                   width={80}
                   height={80}
-                  priority={true}
-                  quality={75}
                 />
               </div>
 
-              <Image
+              <img
                 className="md:w-80 md:h-80 object-cover rounded-3xl"
                 src={"/foto-perfil.webp"}
                 alt="Profile picture of Marcelo Mastroiani"
                 width={600}
                 height={400}
-                priority={true}
-                quality={75}
               />
             </div>
 

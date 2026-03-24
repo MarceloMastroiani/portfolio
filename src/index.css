@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  
   --animate-fade-in: fadeIn 2s ease-out;
   --animate-img-div-transition: imgDivTransition 1s ease-in-out forwards;
   --animate-img-transition: imgTransition 1s ease-in-out;

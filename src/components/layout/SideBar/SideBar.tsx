@@ -2,7 +2,6 @@
 
 import "./SideBar.css";
 import { useState } from "react";
-import Link from "next/link";
 import Burger from "../../ui/Burger/Burger";
 import { nunito } from "../../fonts";
 
@@ -46,13 +45,13 @@ export default function Sidebar() {
             <ul className="p-4">
               {menuItems.map((item) => (
                 <li key={item.href} className="mb-4">
-                  <Link
+                  <a
                     href={item.href}
                     className={`${nunito.className} block p-2 font-bold text-2xl hover:text-(--color-primary) hover:scale-98 ease-in-out duration-300`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

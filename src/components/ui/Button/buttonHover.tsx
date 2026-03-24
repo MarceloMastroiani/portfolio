@@ -1,5 +1,4 @@
-import React from "react";
-import Image from "next/image";
+
 
 interface PropsButton {
   text: string;
@@ -21,7 +20,7 @@ const buttonHover = ({ propsButton }: PropsButtonHover) => {
           className="flex gap-2 text-slate-300/85 text-sm font-semibold"
         >
           {propsButton.text}
-          <Image src={propsButton.image} alt="arrow" width={18} height={18} />
+          <img src={propsButton.image} alt="arrow" width={18} height={18} />
         </a>
       </button>
     </div>

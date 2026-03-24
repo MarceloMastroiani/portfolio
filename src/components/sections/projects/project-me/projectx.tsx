@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
-import Image from "next/image";
+
 
 const projects = [
   {
@@ -98,7 +98,7 @@ export default function ProjectX() {
                 </div>
               </div>
               <div className="aspect-video overflow-hidden">
-                <Image
+                <img
                   width={1000}
                   height={1000}
                   src={project.image || "/placeholder.svg"}
