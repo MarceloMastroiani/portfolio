@@ -26,7 +26,7 @@ const highlights = [
 
 export default function AboutMe() {
   return (
-    <section id="about" className="py-24 bg-neutral-900">
+    <section id="about" className="py-24 bg-noise noise-strong">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">
@@ -62,7 +62,7 @@ export default function AboutMe() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="p-6 bg-background rounded-xl border border-border hover:border-primary/50 transition-colors group"
+                className="p-6 bg-neutral-950 rounded-xl border border-border hover:border-primary/50 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="text-primary" size={24} />

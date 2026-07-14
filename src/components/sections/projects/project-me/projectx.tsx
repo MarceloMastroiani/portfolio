@@ -1,7 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
 
-
 const projects = [
   {
     title: "Microservicios E-commerce",
@@ -84,7 +83,7 @@ export default function ProjectX() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="group bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden hover:border-red-500/50 transition-all duration-300 hover:shadow-xl"
+              className="group bg-noise noise-strong bg-neutral-950 rounded-2xl border border-neutral-800 overflow-hidden hover:border-red-500/50 transition-all duration-300 hover:shadow-xl"
             >
               <div className="flex items-center p-3">
                 <div className="px-1">

@@ -3,7 +3,7 @@
 @theme {
   --font-montserrat: "Montserrat", sans-serif;
   --font-nunito: "Nunito", sans-serif;
-  
+
   --animate-fade-in: fadeIn 2s ease-out;
   --animate-img-div-transition: imgDivTransition 1s ease-in-out forwards;
   --animate-img-transition: imgTransition 1s ease-in-out;
@@ -187,4 +187,33 @@ body {
   padding: 0;
   height: 100%;
   /* background: var(--background-primary); */
+}
+
+/* Utilities for noise background texture */
+@utility bg-noise {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/descarga.svg");
+    opacity: var(--noise-opacity, 0.12);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+  }
+}
+
+@utility noise-subtle {
+  --noise-opacity: 0.08;
+}
+
+@utility noise-medium {
+  --noise-opacity: 0.16;
+}
+
+@utility noise-strong {
+  --noise-opacity: 0.28;
 }

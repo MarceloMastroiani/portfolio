@@ -20,7 +20,7 @@ export default function Hero() {
         zIndex: 100,
       },
       {
-        duration: 2.5,
+        duration: 2,
         zIndex: 80,
       },
     );

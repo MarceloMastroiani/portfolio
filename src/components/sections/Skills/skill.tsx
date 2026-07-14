@@ -48,7 +48,10 @@ const techStack = [
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-24 bg-neutral-950 z-20 ">
+    <section
+      id="skills"
+      className="relative py-24 bg-noise noise-strong bg-neutral-950 z-20 "
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">

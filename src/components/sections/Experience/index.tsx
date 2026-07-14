@@ -49,7 +49,7 @@ const experiences = [
     title: "Inicio en Programación",
     company: "Autodidacta",
     description:
-      "Comencé a aprender programación de forma autodidacta, incorporando los fundamentos de HTML, CSS y JavaScript. Realicé mis primeros proyectos personales, aprendiendo control de versiones con Git y sentando las bases para el desarrollo web.",
+      "Comenzé a aprender programación de forma autodidacta, incorporando los fundamentos de HTML, CSS y JavaScript. Realizé mis primeros proyectos personales, aprendiendo control de versiones con Git y sentando las bases para el desarrollo web.",
     technologies: ["HTML", "CSS", "JavaScript", "Git"],
     side: "left",
   },
@@ -88,7 +88,7 @@ export default function Experience() {
                       : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 hover:scale-105 transition-all duration-300">
+                  <div className="bg-noise noise-strong bg-neutral-950 rounded-xl border border-neutral-800 p-6 hover:scale-105 transition-all duration-300">
                     <span className="text-red-500 font-medium text-sm">
                       {exp.year}
                     </span>
