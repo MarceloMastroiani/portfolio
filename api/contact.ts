@@ -12,9 +12,12 @@ const env = (key: string, fallback: string): string => {
   return fallback;
 };
 
-const resend = new Resend(env("RESEND_API_KEY", ""));
+const RESEND_API_KEY = env("RESEND_API_KEY", "");
+const resend = new Resend(RESEND_API_KEY);
 const FROM_EMAIL = env("RESEND_FROM_EMAIL", "onboarding@resend.dev");
 const TO_EMAIL = env("CONTACT_TO_EMAIL", "mastroianimarcelo04@gmail.com");
+
+const EMAIL_TIMEOUT_MS = 45_000;
 
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== "POST") {
@@ -63,14 +66,28 @@ export default async function handler(req: Request): Promise<Response> {
     );
   }
 
+  if (!RESEND_API_KEY) {
+    console.error("RESEND_API_KEY no configurada");
+    return Response.json(
+      { success: false, error: "Configuración de email incompleta" },
+      { status: 500 },
+    );
+  }
+
+  const sendEmail = resend.emails.send({
+    from: FROM_EMAIL,
+    to: [TO_EMAIL],
+    replyTo: cleanEmail,
+    subject: `[Portafolio] ${cleanSubject}`,
+    text: `Nombre: ${cleanName}\nEmail: ${cleanEmail}\n\n${cleanMessage}`,
+  });
+
+  const timeout = new Promise<never>((_, reject) =>
+    setTimeout(() => reject(new Error("Resend timeout")), EMAIL_TIMEOUT_MS),
+  );
+
   try {
-    await resend.emails.send({
-      from: FROM_EMAIL,
-      to: [TO_EMAIL],
-      replyTo: cleanEmail,
-      subject: `[Portafolio] ${cleanSubject}`,
-      text: `Nombre: ${cleanName}\nEmail: ${cleanEmail}\n\n${cleanMessage}`,
-    });
+    await Promise.race([sendEmail, timeout]);
   } catch (error) {
     console.error("Error enviando email:", error);
     return Response.json(
@@ -84,4 +101,5 @@ export default async function handler(req: Request): Promise<Response> {
 
 export const config = {
   runtime: "nodejs",
+  maxDuration: 60,
 };
