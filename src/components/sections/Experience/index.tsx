@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import { useRevealVariants } from "@/lib/animations";
+
 const experiences = [
   {
     year: "2025 - Presente",
@@ -56,10 +59,18 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const { container, item } = useRevealVariants();
+
   return (
     <section id="experience" className="relative py-24 bg-neutral-950 z-20">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+      <motion.div
+        className="max-w-5xl mx-auto px-6"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <motion.div variants={item} className="text-center mb-16">
           <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">
             Mi Trayectoria
           </p>
@@ -67,16 +78,16 @@ export default function Experience() {
             Experiencia<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
-        </div>
+        </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-neutral-800 hidden md:block" />
 
-          <div className="space-y-12">
+          <motion.div variants={container} className="space-y-12">
             {experiences.map((exp, index) => (
-              <div key={index} className="relative">
+              <motion.div key={index} variants={item} className="relative">
                 {/* Timeline Dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-500 rounded-full border-4 border-neutral-950 hidden md:block" />
 
@@ -113,11 +124,11 @@ export default function Experience() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

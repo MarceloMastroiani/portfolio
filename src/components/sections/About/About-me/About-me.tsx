@@ -1,4 +1,6 @@
 import { Code2, Server, Palette, Zap } from "lucide-react";
+import { motion } from "motion/react";
+import { useRevealVariants } from "@/lib/animations";
 
 const highlights = [
   {
@@ -25,10 +27,18 @@ const highlights = [
 ];
 
 export default function AboutMe() {
+  const { container, item } = useRevealVariants();
+
   return (
     <section id="about" className="py-24 bg-noise noise-strong">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+      <motion.div
+        className="max-w-6xl mx-auto px-6"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+      >
+        <motion.div variants={item} className="text-center mb-16">
           <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">
             Conóceme
           </p>
@@ -36,10 +46,10 @@ export default function AboutMe() {
             Sobre mí<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <motion.div variants={item} className="space-y-6">
             <p className="text-muted-foreground leading-relaxed text-lg">
               Soy un desarrollador full-stack apasionado por crear soluciones
               digitales que marcan la diferencia. Mi enfoque combina la
@@ -56,28 +66,32 @@ export default function AboutMe() {
               aprender y crecer profesionalmente, manteniéndome actualizado con
               las últimas tendencias y mejores prácticas del desarrollo web.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {highlights.map((item) => (
-              <div
-                key={item.title}
+          <motion.div
+            variants={container}
+            className="grid sm:grid-cols-2 gap-4"
+          >
+            {highlights.map((itemInfo) => (
+              <motion.div
+                key={itemInfo.title}
+                variants={item}
                 className="p-6 bg-neutral-950 rounded-xl border border-border hover:border-primary/50 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="text-primary" size={24} />
+                  <itemInfo.icon className="text-primary" size={24} />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  {item.title}
+                  {itemInfo.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  {item.description}
+                  {itemInfo.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

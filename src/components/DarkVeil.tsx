@@ -1,5 +1,17 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec2 } from "ogl";
+
+// Detección no intrusiva de WebGL. Evita crashear en navegadores o ajustes
+// con WebGL deshabilitado (p. ej. LibreWolf), donde getContext devuelve null.
+function isWebGLAvailable(): boolean {
+  if (typeof WebGLRenderingContext === "undefined") return false;
+  try {
+    const probe = document.createElement("canvas");
+    return !!(probe.getContext("webgl2") || probe.getContext("webgl"));
+  } catch {
+    return false;
+  }
+}
 
 const vertex = `
 attribute vec2 position;
@@ -90,17 +102,25 @@ export default function DarkVeil({
   speed = 0.5,
   scanlineFrequency = 0,
   warpAmount = 0,
-  resolutionScale = 0.5, // 🔻 más bajo por defecto
+  resolutionScale = 0.35, // 🔻 más bajo por defecto
 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
+  const [supported] = useState(() => isWebGLAvailable());
 
   useEffect(() => {
+    if (!supported) return;
     const canvas = ref.current as HTMLCanvasElement;
 
-    const renderer = new Renderer({
-      dpr: Math.min(window.devicePixelRatio * resolutionScale, 1),
-      canvas,
-    });
+    let renderer: Renderer;
+    try {
+      renderer = new Renderer({
+        dpr: Math.min(window.devicePixelRatio * resolutionScale, 1),
+        canvas,
+      });
+    } catch (error) {
+      console.warn("[DarkVeil] No se pudo crear el contexto WebGL, usando fondo estático.", error);
+      return;
+    }
 
     const gl = renderer.gl;
     const geometry = new Triangle(gl);
@@ -141,43 +161,68 @@ export default function DarkVeil({
 
     const start = performance.now();
     let frame = 0;
+    let running = false;
 
     // ⏳ FPS limiter
     let last = 0;
-    const FPS = 30;
+    const FPS = 18;
     const interval = 1000 / FPS;
 
     const loop = (now: number) => {
-      if (now - last > interval) {
-        last = now;
+      if (!running) return;
+      frame = requestAnimationFrame(loop);
 
-        program.uniforms.uTime.value = ((now - start) / 1000) * speed;
+      if (now - last < interval) return;
+      last = now;
 
-        renderer.render({ scene: mesh });
-      }
+      program.uniforms.uTime.value = ((now - start) / 1000) * speed;
+      renderer.render({ scene: mesh });
+    };
 
+    const stop = () => {
+      running = false;
+      cancelAnimationFrame(frame);
+    };
+
+    const startLoop = () => {
+      if (running) return;
+      running = true;
       frame = requestAnimationFrame(loop);
     };
 
-    loop(performance.now());
+    // 📴 Pausa cuando el canvas no está en el viewport (ahorra GPU)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startLoop();
+        } else {
+          stop();
+        }
+      },
+      { rootMargin: "100px" },
+    );
 
-    // 📴 pausa si no está visible
+    observer.observe(canvas);
+
+    // 📴 Pausa si la pestaña no está visible
     const handleVisibility = () => {
       if (document.hidden) {
-        cancelAnimationFrame(frame);
+        stop();
       } else {
-        loop(performance.now());
+        startLoop();
       }
     };
 
     document.addEventListener("visibilitychange", handleVisibility);
 
     return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("resize", resize);
-      document.removeEventListener("visibilitychange", handleVisibility);
+      stop();
+      observer.disconnect();
+    window.removeEventListener("resize", resize);
+    document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, [
+    supported,
     hueShift,
     noiseIntensity,
     scanlineIntensity,
@@ -187,7 +232,23 @@ export default function DarkVeil({
     resolutionScale,
   ]);
 
+  if (!supported) {
+    return (
+      <div
+        className="w-full h-full block absolute top-0 left-0"
+        aria-hidden="true"
+        style={{
+          background: `radial-gradient(120% 120% at 50% 30%, hsl(${hueShift} 40% 26%), hsl(${hueShift} 55% 12%) 55%, hsl(${hueShift} 65% 5%))`,
+        }}
+      />
+    );
+  }
+
   return (
-    <canvas ref={ref} className="w-full h-full block absolute top-0 left-0" />
+    <canvas
+      ref={ref}
+      className="w-full h-full block absolute top-0 left-0"
+      aria-hidden="true"
+    />
   );
 }

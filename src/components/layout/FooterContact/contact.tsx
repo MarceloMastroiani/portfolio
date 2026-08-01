@@ -2,11 +2,14 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Mail, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { Download, Mail, MapPin, Send, Linkedin, Github } from "lucide-react";
 import { toast } from "react-hot-toast";
+import { motion } from "motion/react";
+import { useRevealVariants } from "@/lib/animations";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { container, item } = useRevealVariants();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,8 +50,14 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-neutral-950 shadow-2xl">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+      <motion.div
+        className="max-w-6xl mx-auto px-6"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+      >
+        <motion.div variants={item} className="text-center mb-16">
           <p className="text-red-500 font-medium mb-2 tracking-widest uppercase text-sm">
             Trabajemos juntos
           </p>
@@ -56,11 +65,11 @@ export default function Contact() {
             Contacto<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <motion.div variants={item} className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-white mb-4">
                 ¿Tienes un proyecto en mente?
@@ -118,11 +127,23 @@ export default function Contact() {
               >
                 <Linkedin size={20} />
               </a>
+              <a
+                href="/CV-Marcelo-Mastroiani.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-red-500 text-neutral-300 hover:text-white rounded-full transition-colors text-sm font-medium"
+              >
+                <Download size={18} />
+                CV
+              </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <motion.form
+            variants={item}
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label
@@ -208,9 +229,9 @@ export default function Contact() {
                 </>
               )}
             </button>
-          </form>
+          </motion.form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
