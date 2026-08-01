@@ -1,4 +1,8 @@
-import { Resend } from "resend";
+import { setDefaultResultOrder } from "node:dns";
+
+// api.resend.com (Cloudflare) puede resolver a IPv6 sin ruta disponible en el
+// entorno, lo que cuelga la conexión. Forzar IPv4 evita el hang.
+setDefaultResultOrder("ipv4first");
 
 // "undefined"/vacío no cuentan como valor real: caen al fallback.
 const env = (key: string, fallback: string): string => {
@@ -13,11 +17,10 @@ const env = (key: string, fallback: string): string => {
 };
 
 const RESEND_API_KEY = env("RESEND_API_KEY", "");
-const resend = new Resend(RESEND_API_KEY);
 const FROM_EMAIL = env("RESEND_FROM_EMAIL", "onboarding@resend.dev");
 const TO_EMAIL = env("CONTACT_TO_EMAIL", "mastroianimarcelo04@gmail.com");
 
-const EMAIL_TIMEOUT_MS = 45_000;
+const EMAIL_TIMEOUT_MS = 10_000;
 
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== "POST") {
@@ -74,26 +77,42 @@ export default async function handler(req: Request): Promise<Response> {
     );
   }
 
-  const sendEmail = resend.emails.send({
-    from: FROM_EMAIL,
-    to: [TO_EMAIL],
-    replyTo: cleanEmail,
-    subject: `[Portafolio] ${cleanSubject}`,
-    text: `Nombre: ${cleanName}\nEmail: ${cleanEmail}\n\n${cleanMessage}`,
-  });
-
-  const timeout = new Promise<never>((_, reject) =>
-    setTimeout(() => reject(new Error("Resend timeout")), EMAIL_TIMEOUT_MS),
-  );
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), EMAIL_TIMEOUT_MS);
 
   try {
-    await Promise.race([sendEmail, timeout]);
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: FROM_EMAIL,
+        to: [TO_EMAIL],
+        reply_to: cleanEmail,
+        subject: `[Portafolio] ${cleanSubject}`,
+        text: `Nombre: ${cleanName}\nEmail: ${cleanEmail}\n\n${cleanMessage}`,
+      }),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const detail = await response.text();
+      console.error("Resend error:", response.status, detail);
+      return Response.json(
+        { success: false, error: "Error al enviar el mensaje" },
+        { status: 500 },
+      );
+    }
   } catch (error) {
     console.error("Error enviando email:", error);
     return Response.json(
       { success: false, error: "Error al enviar el mensaje" },
       { status: 500 },
     );
+  } finally {
+    clearTimeout(timeoutId);
   }
 
   return Response.json({ success: true });
