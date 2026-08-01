@@ -23,7 +23,7 @@ function devContactApi(): Plugin {
           raw += chunk;
         }
 
-        const { default: contactHandler } = await import("./api/contact");
+        const { POST: contactHandler } = await import("./api/contact");
 
         const webRes = await contactHandler(
           new Request("http://localhost/api/contact", {

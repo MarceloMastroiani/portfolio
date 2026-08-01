@@ -22,7 +22,7 @@ const TO_EMAIL = env("CONTACT_TO_EMAIL", "mastroianimarcelo04@gmail.com");
 
 const EMAIL_TIMEOUT_MS = 8_000;
 
-export default async function handler(req: Request): Promise<Response> {
+export async function POST(req: Request): Promise<Response> {
   if (req.method !== "POST") {
     return Response.json(
       { success: false, error: "Método no permitido" },
