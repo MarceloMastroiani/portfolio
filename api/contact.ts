@@ -20,7 +20,7 @@ const RESEND_API_KEY = env("RESEND_API_KEY", "");
 const FROM_EMAIL = env("RESEND_FROM_EMAIL", "onboarding@resend.dev");
 const TO_EMAIL = env("CONTACT_TO_EMAIL", "mastroianimarcelo04@gmail.com");
 
-const EMAIL_TIMEOUT_MS = 10_000;
+const EMAIL_TIMEOUT_MS = 8_000;
 
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== "POST") {
@@ -106,7 +106,11 @@ export default async function handler(req: Request): Promise<Response> {
       );
     }
   } catch (error) {
-    console.error("Error enviando email:", error);
+    if (error instanceof Error && error.name === "AbortError") {
+      console.error("Email timeout tras 8s");
+    } else {
+      console.error("Error enviando email:", error);
+    }
     return Response.json(
       { success: false, error: "Error al enviar el mensaje" },
       { status: 500 },
