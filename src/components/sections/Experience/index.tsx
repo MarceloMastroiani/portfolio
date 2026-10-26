@@ -3,12 +3,21 @@ import { useRevealVariants } from "@/lib/animations";
 
 const experiences = [
   {
-    year: "2025 - Presente",
-    title: "WordPress Developer (Freelance)",
-    company: "JuninSoft",
+    year: "2026 - Presente",
+    title: "Especialización backend y proyectos propios",
+    company: "Flexio · LazyPlan · Stoqra",
     description:
-      "Trabajo como desarrollador freelance para JuninSoft, participando en el desarrollo, personalización y mantenimiento de sitios web realizados con WordPress. Mi rol incluye la implementación de funcionalidades a medida, ajustes de rendimiento, integración de plugins y adaptación de soluciones según los requerimientos de cada cliente.",
-    technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+      "Encaré proyectos de mayor alcance: Flexio, una API de gestión de turnos con NestJS, Prisma y PostgreSQL; LazyPlan, una herramienta en Python publicada en PyPI; y Stoqra, un bot de Telegram con agentes de IA. También desarrollé una presentación interactiva sobre RISC y CISC para el coloquio de Arquitectura de Computadoras en la UNER.",
+    technologies: [
+      "NestJS",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Python",
+      "Bun",
+      "LangChain",
+      "React",
+    ],
     side: "left",
   },
   {
@@ -16,7 +25,7 @@ const experiences = [
     title: "Full Stack Developer (Freelance)",
     company: "Independiente",
     description:
-      "Trabajo de forma independiente como desarrollador Full Stack, enfocado principalmente en el desarrollo backend. Diseño y desarrollo APIs REST, manejo autenticación, bases de datos y lógica de negocio, además de integrar servicios externos y colaborar en el desarrollo frontend cuando el proyecto lo requiere.",
+      "Trabajo de forma independiente con foco en backend. Diseño APIs REST, implemento autenticación, modelo bases de datos y resuelvo lógica de negocio; también integro servicios externos y colaboro en el frontend cuando el proyecto lo requiere.",
     technologies: [
       "NestJS",
       "Node.js",
@@ -30,31 +39,40 @@ const experiences = [
     side: "right",
   },
   {
+    year: "2025 - Presente",
+    title: "WordPress Developer (Freelance)",
+    company: "JuninSoft",
+    description:
+      "Desarrollo, personalizo y mantengo sitios WordPress para clientes de JuninSoft. Implemento funcionalidades a medida, ajustes de rendimiento, integración de plugins y adaptaciones según cada requerimiento.",
+    technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+    side: "left",
+  },
+  {
     year: "2024",
     title: "Backend Specialization",
     company: "CoderHouse",
     description:
-      "Me especialicé en desarrollo backend a través del curso de Programación Backend en CoderHouse. Durante la cursada desarrollé una API de e-commerce utilizando Node.js y Express, con autenticación JWT, manejo de roles, integración de pagos con Stripe y un sistema de chat en tiempo real con Socket.io. Como evolución del aprendizaje, comencé a trabajar con NestJS y conceptos de arquitectura y microservicios.",
+      "Me especialicé en backend con el curso de Programación Backend. Desarrollé una API de e-commerce con Node.js y Express, autenticación JWT, roles, pagos con Stripe y chat en tiempo real con Socket.io. A partir de ahí empecé a trabajar con NestJS y arquitectura de microservicios.",
     technologies: ["Node.js", "Express.js", "MongoDB", "NestJS", "JWT"],
-    side: "left",
+    side: "right",
   },
   {
     year: "2023",
     title: "Frontend Development",
     company: "CoderHouse",
     description:
-      "Completé mi formación en desarrollo frontend, enfocándome en JavaScript moderno y React. Desarrollé proyectos prácticos que incluyeron aplicaciones interactivas, manejo de estado y maquetado de interfaces responsivas aplicando buenas prácticas de desarrollo web.",
+      "Completé mi formación frontend, enfocada en JavaScript moderno y React. Desarrollé aplicaciones interactivas, manejo de estado y maquetado responsive, y cerré con un e-commerce como proyecto final.",
     technologies: ["React", "JavaScript", "HTML", "CSS", "SASS"],
-    side: "right",
+    side: "left",
   },
   {
     year: "2022",
     title: "Inicio en Programación",
     company: "Autodidacta",
     description:
-      "Comenzé a aprender programación de forma autodidacta, incorporando los fundamentos de HTML, CSS y JavaScript. Realizé mis primeros proyectos personales, aprendiendo control de versiones con Git y sentando las bases para el desarrollo web.",
+      "Arranqué a programar por mi cuenta. Aprendí HTML, CSS y JavaScript, armé mis primeros proyectos y empecé a usar Git y GitHub.",
     technologies: ["HTML", "CSS", "JavaScript", "Git"],
-    side: "left",
+    side: "right",
   },
 ];
 
@@ -78,6 +96,13 @@ export default function Experience() {
             Experiencia<span className="text-red-500">.</span>
           </h2>
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
+          <p className="max-w-3xl mx-auto mt-6 text-neutral-400 leading-relaxed text-left sm:text-center">
+            Empecé a programar de forma autodidacta en 2022. Desde entonces
+            combiné formación, proyectos personales y trabajo freelance: pasé
+            del frontend con React al backend con Node.js y NestJS, y hoy
+            trabajo en APIs, herramientas propias y proyectos con IA. Esta es
+            la línea de tiempo de ese recorrido.
+          </p>
         </motion.div>
 
         {/* Timeline */}

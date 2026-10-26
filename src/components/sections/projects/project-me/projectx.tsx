@@ -28,11 +28,11 @@ export default function ProjectX() {
           variants={container}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             const imageBase = project.image;
             return (
             <motion.article
-              key={index}
+              key={project.title}
               variants={item}
               className="group bg-noise noise-strong bg-neutral-950 rounded-2xl border border-neutral-800 overflow-hidden hover:border-red-500/50 transition-all duration-300 hover:shadow-xl"
             >
@@ -49,8 +49,8 @@ export default function ProjectX() {
               </div>
               <div className="aspect-video overflow-hidden">
                 <img
-                  width={1000}
-                  height={1000}
+                  width={960}
+                  height={540}
                   src={`${imageBase}-640.webp`}
                   srcSet={`${imageBase}-640.webp 640w, ${imageBase}-960.webp 960w`}
                   sizes="(min-width: 1024px) 400px, (min-width: 768px) 340px, 100vw"
@@ -88,6 +88,7 @@ export default function ProjectX() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Ver el código de ${project.title} en GitHub`}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-neutral-700 hover:border-neutral-600 text-white text-sm font-medium rounded-lg transition-colors"
                     >
                       <Github className="mr-2 h-4 w-4" />
@@ -99,10 +100,15 @@ export default function ProjectX() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={
+                        project.demoLabel
+                          ? `Ver ${project.title} en ${project.demoLabel}`
+                          : `Abrir la demo de ${project.title}`
+                      }
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded-lg transition-colors"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
+                      {project.demoLabel ?? "Demo"}
                     </a>
                   )}
                 </div>

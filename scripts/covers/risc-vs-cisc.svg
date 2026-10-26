@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09090b" />
+      <stop offset="1" stop-color="#18181b" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.84" cy="0.16" r="0.62">
+      <stop offset="0" stop-color="#ef4444" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <rect width="1280" height="720" fill="url(#grid)" />
+  <rect width="1280" height="720" fill="url(#glow)" />
+
+  <line x1="80" y1="100" x2="1200" y2="100" stroke="#27272a" stroke-width="1" />
+
+  <text x="80" y="74" font-family="Inter, DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#fafafa">MM<tspan fill="#ef4444">.</tspan></text>
+  <text x="1200" y="72" text-anchor="end" font-family="Inter, DejaVu Sans, sans-serif" font-size="15" font-weight="600" letter-spacing="4" fill="#ef4444">INTERACTIVE TALK</text>
+
+  <rect x="80" y="208" width="96" height="6" rx="3" fill="#ef4444" />
+  <text x="80" y="304" font-family="Inter, DejaVu Sans, sans-serif" font-size="62" font-weight="700" letter-spacing="-1.5" fill="#ffffff">RISC vs CISC</text>
+  <text x="80" y="356" font-family="Inter, DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#a1a1aa">Presentación interactiva de arquitectura</text>
+
+  
+    <g>
+      <rect x="80" y="566" width="80" height="44" rx="22" fill="#18181b" stroke="#3f3f46" />
+      <text x="120" y="594" text-anchor="middle" font-family="Inter, DejaVu Sans, sans-serif" font-size="17" font-weight="500" fill="#d4d4d8">React</text>
+    </g>
+    <g>
+      <rect x="172" y="566" width="130" height="44" rx="22" fill="#18181b" stroke="#3f3f46" />
+      <text x="237" y="594" text-anchor="middle" font-family="Inter, DejaVu Sans, sans-serif" font-size="17" font-weight="500" fill="#d4d4d8">TypeScript</text>
+    </g>
+    <g>
+      <rect x="314" y="566" width="72" height="44" rx="22" fill="#18181b" stroke="#3f3f46" />
+      <text x="350" y="594" text-anchor="middle" font-family="Inter, DejaVu Sans, sans-serif" font-size="17" font-weight="500" fill="#d4d4d8">GSAP</text>
+    </g>
+    <g>
+      <rect x="398" y="566" width="110" height="44" rx="22" fill="#18181b" stroke="#3f3f46" />
+      <text x="453" y="594" text-anchor="middle" font-family="Inter, DejaVu Sans, sans-serif" font-size="17" font-weight="500" fill="#d4d4d8">Tailwind</text>
+    </g>
+  
+    <g transform="translate(966 176)">
+      <rect x="0" y="0" width="214" height="214" rx="28" fill="#111113" stroke="#27272a" />
+      <rect x="52" y="52" width="110" height="110" rx="18" fill="none" stroke="#ef4444" stroke-width="4" />
+      <rect x="78" y="78" width="58" height="58" rx="10" fill="#ef4444" opacity="0.18" />
+      <text x="107" y="116" text-anchor="middle" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#ef4444">CPU</text>
+      <g stroke="#3f3f46" stroke-width="4" stroke-linecap="round">
+        <path d="M74 52 v-22 M107 52 v-22 M140 52 v-22" />
+        <path d="M74 162 v22 M107 162 v22 M140 162 v22" />
+        <path d="M52 74 h-22 M52 107 h-22 M52 140 h-22" />
+        <path d="M162 74 h22 M162 107 h22 M162 140 h22" />
+      </g>
+    </g>
+
+  <line x1="80" y1="648" x2="1200" y2="648" stroke="#27272a" stroke-width="1" />
+  <text x="80" y="686" font-family="DejaVu Sans Mono, monospace" font-size="14" letter-spacing="3" fill="#52525b">MARCELO MASTROIANI</text>
+  <text x="1200" y="686" text-anchor="end" font-family="DejaVu Sans Mono, monospace" font-size="14" letter-spacing="3" fill="#52525b">PORTAFOLIO</text>
+</svg>

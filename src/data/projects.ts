@@ -5,68 +5,95 @@ export interface Project {
   technologies: string[];
   github: string | null;
   demo: string | null;
+  demoLabel?: string;
 }
 
 export const projects: Project[] = [
   {
-    title: "Microservicios E-commerce",
+    title: "Flexio API Core",
     description:
-      "Conjunto de microservicios desarrollados con NestJS y TypeScript, implementando arquitectura modular para gestionar productos, clientes, pedidos y pagos. Integración de NATS para comunicación entre servicios, autenticación JWT, manejo de bases de datos con Prisma y pagos mediante Stripe.",
-    image: "/microservices-architecture-dashboard-dark-theme",
+      "API para la gestión de turnos, clientes, empleados, servicios y caja de un negocio de servicios. Incluye autenticación JWT con roles, cálculo de disponibilidad, validación de solapamientos, documentación Swagger y entorno Docker con PostgreSQL.",
+    image: "/covers/flexio-api-core",
     technologies: [
       "NestJS",
       "TypeScript",
       "Prisma",
-      "NATS",
+      "PostgreSQL",
+      "JWT",
       "Docker",
-      "Stripe",
+      "Swagger",
     ],
-    github: "https://github.com/MarceloMastroiani",
+    github: "https://github.com/MarceloMastroiani/flexio-api-core",
     demo: null,
+  },
+  {
+    title: "Stoqra",
+    description:
+      "Bot de Telegram que funciona como agente de IA. Cada usuario configura su proveedor y API key; las claves se guardan cifradas y las conversaciones persisten en SQLite.",
+    image: "/covers/stoqra",
+    technologies: [
+      "Bun",
+      "TypeScript",
+      "Telegraf",
+      "LangChain",
+      "LangGraph",
+      "SQLite",
+    ],
+    github: "https://github.com/MarceloMastroiani/stoqra",
+    demo: null,
+  },
+  {
+    title: "LazyPlan",
+    description:
+      "TUI en Python para capturar y gestionar ideas de proyectos desde la terminal. Permite buscar, filtrar y editar ideas, crear la estructura de carpetas y generar el repositorio en GitHub sin salir de la app.",
+    image: "/covers/lazyplan",
+    technologies: ["Python", "Textual", "Typer", "JSON", "GitHub CLI"],
+    github: "https://github.com/MarceloMastroiani/lazyPlan",
+    demo: "https://pypi.org/project/lazyplan/",
+    demoLabel: "PyPI",
+  },
+  {
+    title: "RISC vs CISC",
+    description:
+      "Presentación interactiva tipo scrollytelling sobre arquitecturas RISC y CISC, con animaciones al scroll, comparadores visuales y drag & drop. Desarrollada para el coloquio de Arquitectura de Computadoras en la UNER.",
+    image: "/covers/risc-vs-cisc",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "GSAP",
+      "Framer Motion",
+      "dnd-kit",
+    ],
+    github: "https://github.com/MarceloMastroiani/risc-vs-cisc",
+    demo: "https://marcelomastroiani.github.io/risc-vs-cisc/",
   },
   {
     title: "E-commerce React",
     description:
-      "E-commerce desarrollado como proyecto final del curso de React en Coderhouse. Construido con React y Vite, conectado a Firebase para la base de datos. Incluye componentes reutilizables, carrito de compras y flujo optimizado para escalar nuevas funcionalidades.",
-    image: "/modern-ecommerce-mobile-app-interface",
-    technologies: ["React", "Vite", "Firebase", "JavaScript", "CSS"],
-    github: "https://github.com/MarceloMastroiani",
-    demo: null,
-  },
-  {
-    title: "App de Películas",
-    description:
-      "Aplicación web interactiva desarrollada con React y Vite, que consume la API pública de OMDB para mostrar información detallada sobre películas. Implementación de búsqueda dinámica, manejo de estados con hooks y optimización de rendimiento con Vite.",
-    image: "/movie-streaming-app-interface-dark-theme-posters",
-    technologies: ["React", "Vite", "OMDB API", "CSS"],
-    github: "https://github.com/MarceloMastroiani",
+      "E-commerce desarrollado como proyecto final del curso de React en CoderHouse. Catálogo, detalle de producto, carrito y alta de productos, con Firebase como backend y estado global con Redux Toolkit.",
+    image: "/covers/ecommerce-react",
+    technologies: [
+      "React",
+      "Vite",
+      "Firebase",
+      "Redux Toolkit",
+      "React Router",
+      "Bootstrap",
+      "React Hook Form",
+    ],
+    github:
+      "https://github.com/MarceloMastroiani/React-proyectoFinal-mastroiani",
     demo: null,
   },
   {
     title: "Energon - Sistemas de Riego",
     description:
-      "Desarrollo de sitio web corporativo en WordPress con personalización en JavaScript y CSS. Se trabajó en la optimización de diseño, navegación y presentación de soluciones de riego para el campo moderno.",
+      "Sitio web corporativo en WordPress con personalización en JavaScript y CSS. Se trabajó en la optimización del diseño, la navegación y la presentación de soluciones de riego para el campo.",
     image: "/agriculture-irrigation-systems-corporate-website-g",
     technologies: ["WordPress", "JavaScript", "CSS", "PHP"],
     github: null,
     demo: "https://energon.com.ar",
-  },
-  {
-    title: "Circulo Fertil",
-    description:
-      "Desarrollo de sitio web corporativo en WordPress con personalización en JavaScript y CSS. Se trabajó en la optimización de diseño, navegación y velocidad de carga para mejorar la experiencia del usuario.",
-    image: "/sustainable-agriculture-corporate-website-modern",
-    technologies: ["WordPress", "JavaScript", "CSS", "PHP"],
-    github: null,
-    demo: "https://circulofertil.juninsoft.com",
-  },
-  {
-    title: "Historias Wanderlust",
-    description:
-      "Blog de viajes desarrollado con WordPress, Elementor y JavaScript, enfocado en un diseño visual atractivo, navegación fluida y experiencia de usuario optimizada.",
-    image: "/historias-wanderlust",
-    technologies: ["WordPress", "Elementor", "JavaScript", "CSS"],
-    github: null,
-    demo: "https://historiaswanderlust.com/",
   },
 ];
