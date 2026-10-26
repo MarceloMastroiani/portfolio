@@ -39,7 +39,7 @@ const experiences = [
     side: "right",
   },
   {
-    year: "2025 - Presente",
+    year: "2025 - 2026",
     title: "WordPress Developer (Freelance)",
     company: "JuninSoft",
     description:
